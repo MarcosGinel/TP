@@ -35,6 +35,7 @@ CREATE TABLE Reparaciones
   piezas_a_comprar VARCHAR(1000),
   fecha_fin_de_reparacion TIMESTAMP,
   observaciones_y_recomendaciones VARCHAR(2000),
+  creado_por ENUM ('admin', 'empleado')
   PRIMARY KEY (reparacion_id),
   FOREIGN KEY (cliente_id) REFERENCES Clientes(cliente_id)
 );
@@ -47,10 +48,10 @@ INSERT INTO Clientes VALUES (4, 'Acha Tío', '11111111X', 'elcorreosexy@gmail.co
 INSERT INTO Clientes VALUES (5, 'Sexy Joaquín Peña', '11111111X', 'elcorreosexy@gmail.com', '666666666', NOW());
 INSERT INTO Clientes VALUES (6, 'Sexy Hijo de Joaquín Peña', '11111111X', 'elcorreosexy@gmail.com', '666666666', NOW());
 
-INSERT INTO Reparaciones VALUES (1, 1, 'Galaxy S4','imei', TRUE, FALSE, TRUE, TRUE, 'Sin observaciones', 50.50,  True, '12 horas', 'No reparado', 'Nada', 'Ninguna', '2016-01-30 21:24:15', 'Sin observaciones');
-INSERT INTO Reparaciones VALUES (2, 2, 'iFone', 'imei',TRUE, FALSE, TRUE, TRUE, 'Sin observaciones', 150.50,  True, '12 horas', 'No reparado', 'Nada', 'Ninguna', '2016-01-30 21:24:15', 'Sin observaciones');
-INSERT INTO Reparaciones VALUES (3, 2, 'BQ Full HD','imei', TRUE, FALSE, TRUE, TRUE, 'Sin observaciones', 69.69,  True, '12 horas', 'No reparado', 'Nada', 'Ninguna', '2016-01-30 21:24:15', 'Sin observaciones');
-INSERT INTO Reparaciones VALUES (4, 3, 'Iphone', 'imei',TRUE, FALSE, TRUE, TRUE, 'Sin observaciones', 50.50,  True, '12 horas', 'No reparado', 'Nada', 'Ninguna', '2016-01-30 21:24:15', 'Sin observaciones');
-INSERT INTO Reparaciones VALUES (5, 4, 'Achaaaa Iphone', 'imei',TRUE, FALSE, TRUE, TRUE, 'Sin observaciones', 50.50,  True, '12 horas', 'No reparado', 'Nada', 'Ninguna', '2016-01-30 21:24:15', 'Sin observaciones');
-INSERT INTO Reparaciones VALUES (6, 5, 'Joaquinito Peña iPhone', 'imei',TRUE, FALSE, TRUE, TRUE, 'Sin observaciones', 50.50,  True, '12 horas', 'No reparado', 'Nada', 'Ninguna', '2016-01-30 21:24:15', 'Sin observaciones');
-INSERT INTO Reparaciones VALUES (7, 6, 'Note 4', 'imei',TRUE, FALSE, TRUE, TRUE, 'Sin observaciones', 50.50,  True, '12 horas', 'No reparado', 'Nada', 'Ninguna', '2016-01-30 21:24:15', 'Sin observaciones');
+INSERT INTO Reparaciones VALUES (1, 1, 'Galaxy S4','imei', TRUE, FALSE, TRUE, TRUE, 'Sin observaciones', 50.50,  True, '12 horas', 'No reparado', 'Nada', 'Ninguna', '2016-01-30 21:24:15', 'Sin observaciones', 'admin');
+INSERT INTO Reparaciones VALUES (2, 2, 'iFone', 'imei',TRUE, FALSE, TRUE, TRUE, 'Sin observaciones', 150.50,  True, '12 horas', 'No reparado', 'Nada', 'Ninguna', '2016-01-30 21:24:15', 'Sin observaciones', 'admin');
+INSERT INTO Reparaciones VALUES (3, 2, 'BQ Full HD','imei', TRUE, FALSE, TRUE, TRUE, 'Sin observaciones', 69.69,  True, '12 horas', 'No reparado', 'Nada', 'Ninguna', '2016-01-30 21:24:15', 'Sin observaciones', 'admin');
+INSERT INTO Reparaciones VALUES (4, 3, 'Iphone', 'imei',TRUE, FALSE, TRUE, TRUE, 'Sin observaciones', 50.50,  True, '12 horas', 'No reparado', 'Nada', 'Ninguna', '2016-01-30 21:24:15', 'Sin observaciones', 'admin');
+INSERT INTO Reparaciones VALUES (5, 4, 'Achaaaa Iphone', 'imei',TRUE, FALSE, TRUE, TRUE, 'Sin observaciones', 50.50,  True, '12 horas', 'No reparado', 'Nada', 'Ninguna', '2016-01-30 21:24:15', 'Sin observaciones', 'admin');
+INSERT INTO Reparaciones VALUES (6, 5, 'Joaquinito Peña iPhone', 'imei',TRUE, FALSE, TRUE, TRUE, 'Sin observaciones', 50.50,  True, '12 horas', 'No reparado', 'Nada', 'Ninguna', '2016-01-30 21:24:15', 'Sin observaciones', 'admin');
+INSERT INTO Reparaciones VALUES (7, 6, 'Note 4', 'imei',TRUE, FALSE, TRUE, TRUE, 'Sin observaciones', 50.50,  True, '12 horas', 'No reparado', 'Nada', 'Ninguna', '2016-01-30 21:24:15', 'Sin observaciones', 'admin');

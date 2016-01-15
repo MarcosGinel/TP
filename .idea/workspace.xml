@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0fc59fd-d06f-4513-bebb-fe7aea378b56" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../telefoneitor/dominio/Cliente.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../telefoneitor/repositorio/preparaBD.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../telefoneitor/repositorio/repositorioClientes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../telefoneitor/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/../telefoneitor/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../telefoneitor/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../telefoneitor/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../telefoneitor/script/telefoneitor_db_script.sql" afterPath="$PROJECT_DIR$/../telefoneitor/script/telefoneitor_db_script.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../telefoneitor/tests/testRepositorio.php" afterPath="$PROJECT_DIR$/../telefoneitor/tests/testRepositorio.php" />
     </list>
     <ignored path="untitled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -94,8 +89,8 @@
       <file leaf-file-name="telefoneitor_db_script.sql" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../telefoneitor/script/telefoneitor_db_script.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9921466">
-              <caret line="49" column="28" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.7329843">
+              <caret line="56" column="213" selection-start-line="56" selection-start-column="213" selection-end-line="56" selection-end-column="213" />
               <folding />
             </state>
           </provider>
@@ -407,7 +402,13 @@
       <option name="project" value="LOCAL" />
       <updated>1452896104660</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Añadido repositorio de Clientes (aún no terminado), y conector a la base de datos.">
+      <created>1452901785433</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1452901785433</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView">
@@ -428,7 +429,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7250409" sideWeight="0.5030257" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.4969743" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.4969743" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33551556" sideWeight="0.4969743" order="6" side_tool="false" content_ui="tabs" />
@@ -461,7 +462,8 @@
     <MESSAGE value="Commit inicial" />
     <MESSAGE value="Modificación" />
     <MESSAGE value="Añadido primer test PHP" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadido primer test PHP" />
+    <MESSAGE value="Añadido repositorio de Clientes (aún no terminado), y conector a la base de datos." />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadido repositorio de Clientes (aún no terminado), y conector a la base de datos." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -596,8 +598,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../telefoneitor/script/telefoneitor_db_script.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9921466">
-          <caret line="49" column="28" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.7329843">
+          <caret line="56" column="213" selection-start-line="56" selection-start-column="213" selection-end-line="56" selection-end-column="213" />
           <folding />
         </state>
       </provider>
