@@ -6,6 +6,7 @@ GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' REQUIRE NONE WITH GRANT OPTIO
 CREATE USER 'empleado'@'localhost' IDENTIFIED VIA mysql_native_password USING '*7F324EE6FDAF1A668A8B16C048C801CBF7FE245E';
 GRANT SELECT, INSERT, UPDATE, DELETE, FILE ON *.* TO 'empleado'@'localhost' REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
 
+# Tablas
 CREATE TABLE Clientes (
   cliente_id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   nombre VARCHAR(150) NOT NULL,
@@ -37,6 +38,7 @@ CREATE TABLE Reparaciones
   FOREIGN KEY (cliente_id) REFERENCES Clientes(cliente_id)
 );
 
+# Datos
 INSERT INTO Clientes VALUES (1, 'Yo', '11111111X', 'elcorreosexy@gmail.com', '666666666', NOW());
 INSERT INTO Clientes VALUES (2, 'Cris', '11111111X', 'elcorreosexy@gmail.com', '666666666', NOW());
 INSERT INTO Clientes VALUES (3, 'Omar', '11111111X', 'elcorreosexy@gmail.com', '666666666', NOW());
