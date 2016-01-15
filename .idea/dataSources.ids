@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - telefoneitor_db@localhost" uuid="5d7d2d20-9817-4e80-b474-7d3dafe14f4b">
+    <database-info product="MySQL" version="5.5.5-10.1.8-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.4">
+      <schema id="1" name="telefoneitor_db"/>
+      <table id="2" parent="1" name="clientes"/>
+      <table id="3" parent="1" name="reparaciones"/>
+      <column id="4" parent="2" name="cliente_id">
+        <mandatory>1</mandatory>
+        <data-type>int(6) unsigned</data-type>
+      </column>
+      <column id="5" parent="2" name="nombre">
+        <mandatory>1</mandatory>
+        <data-type>varchar(150)</data-type>
+      </column>
+      <column id="6" parent="2" name="dni">
+        <mandatory>1</mandatory>
+        <data-type>varchar(9)</data-type>
+      </column>
+      <column id="7" parent="2" name="email">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="8" parent="2" name="telefono">
+        <data-type>varchar(9)</data-type>
+      </column>
+      <column id="9" parent="2" name="fechaDeRegistro">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <key id="10" parent="2" name="PRIMARY">
+        <columns>cliente_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="11" parent="3" name="reparacion_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="12" parent="3" name="cliente_id">
+        <data-type>int(6) unsigned</data-type>
+      </column>
+      <column id="13" parent="3" name="marcamodelo">
+        <mandatory>1</mandatory>
+        <data-type>varchar(80)</data-type>
+      </column>
+      <column id="14" parent="3" name="sim">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="15" parent="3" name="funda">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="16" parent="3" name="sd">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="17" parent="3" name="cargador">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="18" parent="3" name="observaciones_previas">
+        <data-type>varchar(2000)</data-type>
+      </column>
+      <column id="19" parent="3" name="presupuesto">
+        <data-type>double(5,2)</data-type>
+      </column>
+      <column id="20" parent="3" name="estado_de_presupuesto">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="21" parent="3" name="plazoentrega">
+        <data-type>enum(&apos;Urgente&apos;, &apos;12 horas&apos;, &apos;24 horas&apos;, &apos;36 horas&apos;, &apos;48 horas&apos;, &apos;72 horas&apos;, &apos;1 semana&apos;)</data-type>
+      </column>
+      <column id="22" parent="3" name="estado">
+        <data-type>enum(&apos;No reparado&apos;, &apos;Reparado&apos;, &apos;Faltan piezas&apos;, &apos;A reparar&apos;)</data-type>
+      </column>
+      <column id="23" parent="3" name="operaciones_efectuadas">
+        <data-type>varchar(2000)</data-type>
+      </column>
+      <column id="24" parent="3" name="piezas_a_comprar">
+        <data-type>varchar(1000)</data-type>
+      </column>
+      <column id="25" parent="3" name="fecha_fin_de_reparacion">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="26" parent="3" name="observaciones_y_recomendaciones">
+        <data-type>varchar(2000)</data-type>
+      </column>
+      <index id="27" parent="3" name="cliente_id">
+        <columns>cliente_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="28" parent="3" name="PRIMARY">
+        <columns>reparacion_id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="29" parent="3" name="reparaciones_ibfk_1">
+        <columns>cliente_id</columns>
+        <ref-key>~.clientes.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+    </database-model>
+  </data-source>
+</component>
