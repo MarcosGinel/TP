@@ -35,7 +35,7 @@ CREATE TABLE Reparaciones
   piezas_a_comprar VARCHAR(1000),
   fecha_fin_de_reparacion TIMESTAMP,
   observaciones_y_recomendaciones VARCHAR(2000),
-  creado_por ENUM ('admin', 'empleado')
+  creado_por ENUM ('admin', 'empleado'),
   PRIMARY KEY (reparacion_id),
   FOREIGN KEY (cliente_id) REFERENCES Clientes(cliente_id)
 );

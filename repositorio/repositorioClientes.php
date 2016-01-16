@@ -54,4 +54,31 @@ function getClienteById($username, $password, $id)
         echo "Error: " . $e->getMessage();
     }
 }
+
+function getClientesByNombre($username, $password, $name)
+{
+    try {
+        include_once($_SERVER['DOCUMENT_ROOT'] . "/repositorio/preparaBD.php");
+        $conn = preparaBD($username, $password);
+        $query = "SELECT * FROM Clientes c WHERE c.nombre LIKE '".$name."%'";
+        $stmt = $conn->prepare($query);
+        $stmt->execute();
+        $array = Array();
+        $contador = 0;
+        // set the resulting array to associative
+        $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $fila = $stmt->fetch();
+        while($fila) {
+            $clienteNuevo = new Cliente($fila["cliente_id"],$fila["nombre"],$fila["cliente_id"],$fila["dni"],$fila["email"],$fila["telefono"],$fila["fechaDeRegistro"]);
+            //$clienteNuevo->imprimeCliente();
+            $array[$contador] = $clienteNuevo;
+            $contador++;
+            $fila = $stmt->fetch();
+        }
+        cerrarBD($conn);
+        return $array;
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
+}
 ?>

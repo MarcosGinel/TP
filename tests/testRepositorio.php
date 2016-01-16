@@ -13,11 +13,18 @@ $password = "admin";
 chdir($_SERVER['DOCUMENT_ROOT']);
 // echo $_SERVER['DOCUMENT_ROOT'];
 include_once($_SERVER['DOCUMENT_ROOT']."/repositorio/repositorioClientes.php");
-$array = getClientes($username, $password);
 
+$array = getClientes($username, $password);
 foreach ($array as $clave => $valor)
     $valor->imprimeCliente();
 
 $cliente = getClienteById($username, $password, 1);
 $cliente->imprimeCliente();
+
+$array = getClienteByNombre($username, $password, "Se");
+foreach ($array as $clave => $valor)
+    $valor->imprimeCliente();
+
+
+
 ?>
