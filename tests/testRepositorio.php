@@ -1,34 +1,58 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: MarcosAlberto
- * Date: 15/01/2016
- * Time: 23:14
- */
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    </head>
+    <body>
 
-//    echo phpinfo();
-$username = "admin";
-$password = "admin";
 
-chdir($_SERVER['DOCUMENT_ROOT']);
-// echo $_SERVER['DOCUMENT_ROOT'];
-include_once($_SERVER['DOCUMENT_ROOT']."/repositorio/repositorioClientes.php");
+        <?php
+        /**
+         * Created by PhpStorm.
+         * User: MarcosAlberto
+         * Date: 15/01/2016
+         * Time: 23:14
+         */
 
-$array = getClientes($username, $password);
-foreach ($array as $clave => $valor)
-    $valor->imprimeCliente();
+        //    echo phpinfo();
+        $username = "admin";
+        $password = "admin";
 
-$cliente = getClienteById($username, $password, 1);
-$cliente->imprimeCliente();
+        chdir($_SERVER['DOCUMENT_ROOT']);
+        // echo $_SERVER['DOCUMENT_ROOT'];
+        include_once($_SERVER['DOCUMENT_ROOT']."/repositorio/repositorioClientes.php");
+        include_once($_SERVER['DOCUMENT_ROOT']."/dominio/Cliente.php");
+        $array = getClientes($username, $password);
+        foreach ($array as $clave => $valor)
+            $valor->imprimeCliente();
 
-$array = getClientesByNombre($username, $password, "Se");
-foreach ($array as $clave => $valor)
-    $valor->imprimeCliente();
+        $cliente = getClienteById($username, $password, 1);
+        $cliente->imprimeCliente();
 
-$cliente = getClienteByDNI($username, $password, "11111111X");
-$cliente->imprimeCliente();
+        $array = getClientesByNombre($username, $password, "Se");
+        foreach ($array as $clave => $valor)
+            $valor->imprimeCliente();
 
-$cliente = getClienteByTelefono($username, $password, "666666666");
-$cliente->imprimeCliente();
+        $cliente = getClienteByDNI($username, $password, "11111111X");
+        $cliente->imprimeCliente();
 
-?>
+        $cliente = getClienteByTelefono($username, $password, "666666666");
+        $cliente->imprimeCliente();
+
+        insertarCliente("admin", "admin","Marcos","12345679N","lala@lala.com","954666222");
+        $array = getClientes($username, $password);
+        foreach ($array as $clave => $valor)
+            $valor->imprimeCliente();
+
+        $cliente = new Cliente(0, "Marcos 2", "87654321N", "lalal@lala.com", "999999999", "");
+        insertarObjetoCliente("admin", "admin", $cliente);
+        $array = getClientes($username, $password);
+        foreach ($array as $clave => $valor)
+            $valor->imprimeCliente();
+
+        actualizaCliente("admin", "admin", 1, "MiNombre", "99999999N", "prueba@prueba.com", "555555555");
+        $array = getClientes($username, $password);
+        foreach ($array as $clave => $valor)
+            $valor->imprimeCliente();
+        ?>
+    </body>
+</html>

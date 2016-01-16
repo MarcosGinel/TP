@@ -43,5 +43,54 @@ class Cliente {
         echo $this->telefono.'<br/>';
         echo $this->fechaDeRegistro.'<br/>';
     }
+
+    function getId() {
+        return $this->cliente_id;
+    }
+
+    function getNombre() {
+        return $this->nombre;
+    }
+
+    function getDNI() {
+        return $this->dni;
+    }
+
+    function getEmail() {
+        return $this->email;
+    }
+
+    function getTelefono() {
+        return $this->telefono;
+    }
+
+    function getFechaDeRegistro() {
+        return $this->fechaDeRegistro;
+    }
+
+    function setId($id) {
+        $this->cliente_id = $id;
+    }
+
+    function setNombre($nombre) {
+        $this->nombre = $nombre;
+    }
+
+    function setDNI($dni) {
+        $this->dni = $dni;
+    }
+
+    function setEmail($email) {
+        $this->email = $email;
+    }
+
+    function setTelefono($telefono) {
+        $this->telefono = $telefono;
+    }
+
+    function setFechaDeRegistro($fechaDeRegistro) {
+        $this->fechaDeRegistro = $fechaDeRegistro;
+    }
+
 }
 ?>

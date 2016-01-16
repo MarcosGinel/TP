@@ -127,4 +127,57 @@ function getClienteByTelefono($username, $password, $telf)
         echo "Error: " . $e->getMessage();
     }
 }
+
+function insertarObjetoCliente($username, $password, $cliente) {
+    try {
+        include_once($_SERVER['DOCUMENT_ROOT'] . "/repositorio/preparaBD.php");
+        $conn = preparaBD($username, $password);
+        $nombre = $cliente->getNombre();
+        $dni = $cliente->getDNI();
+        $email = $cliente->getEmail();
+        $telefono = $cliente->getTelefono();
+        $fechaDeRegistro = $cliente->getFechaDeRegistro();
+        $query = 'INSERT INTO Clientes (nombre, dni, email, telefono, fechaDeRegistro) VALUES ("'.$nombre.'", "'.$dni.'", "'.$email.'", "'.$telefono.'", now()) ';
+        echo $query;
+        $stmt = $conn->prepare($query);
+        $exito = $stmt->execute();
+
+        cerrarBD($conn);
+        return $exito;
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
+}
+
+function insertarCliente($username, $password, $nombre, $dni, $email, $telefono) {
+    try {
+        include_once($_SERVER['DOCUMENT_ROOT'] . "/repositorio/preparaBD.php");
+        $conn = preparaBD($username, $password);
+        $query = 'INSERT INTO Clientes (nombre, dni, email, telefono, fechaDeRegistro) VALUES ("'.$nombre.'", "'.$dni.'", "'.$email.'", "'.$telefono.'", now()) ';
+        //echo $query;
+        $stmt = $conn->prepare($query);
+        $exito = $stmt->execute();
+
+        cerrarBD($conn);
+        return $exito;
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
+}
+
+function actualizaCliente($username, $password, $cliente_id, $nombre, $dni, $email, $telefono) {
+    try {
+        include_once($_SERVER['DOCUMENT_ROOT'] . "/repositorio/preparaBD.php");
+        $conn = preparaBD($username, $password);
+        $query = 'UPDATE Clientes SET nombre="'.$nombre.'", dni="'.$dni.'", email="'.$email.'", telefono="'.$telefono.'" WHERE cliente_id='.$cliente_id;
+        //echo $query;
+        $stmt = $conn->prepare($query);
+        $exito = $stmt->execute();
+
+        cerrarBD($conn);
+        return $exito;
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
+}
 ?>
