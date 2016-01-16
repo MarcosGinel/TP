@@ -28,6 +28,7 @@ foreach ($array as $clave => $valor)
 $cliente = getClienteByDNI($username, $password, "11111111X");
 $cliente->imprimeCliente();
 
-
+$cliente = getClienteByTelefono($username, $password, "666666666");
+$cliente->imprimeCliente();
 
 ?>
