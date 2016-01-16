@@ -21,9 +21,12 @@ foreach ($array as $clave => $valor)
 $cliente = getClienteById($username, $password, 1);
 $cliente->imprimeCliente();
 
-$array = getClienteByNombre($username, $password, "Se");
+$array = getClientesByNombre($username, $password, "Se");
 foreach ($array as $clave => $valor)
     $valor->imprimeCliente();
+
+$cliente = getClienteByDNI($username, $password, "11111111X");
+$cliente->imprimeCliente();
 
 
 

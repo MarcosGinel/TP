@@ -81,4 +81,28 @@ function getClientesByNombre($username, $password, $name)
         echo "Error: " . $e->getMessage();
     }
 }
+
+function getClienteByDNI($username, $password, $dniABuscar)
+{
+    try {
+        include_once($_SERVER['DOCUMENT_ROOT'] . "/repositorio/preparaBD.php");
+        $conn = preparaBD($username, $password);
+        $query = "SELECT * FROM Clientes c WHERE c.dni LIKE '".$dniABuscar."'";
+        $stmt = $conn->prepare($query);
+        $stmt->execute();
+
+        // set the resulting array to associative
+        $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $fila = $stmt->fetch();
+        while($fila) {
+            $clienteNuevo = new Cliente($fila["cliente_id"],$fila["nombre"],$fila["cliente_id"],$fila["dni"],$fila["email"],$fila["telefono"],$fila["fechaDeRegistro"]);
+            $fila = $stmt->fetch();
+        }
+        cerrarBD($conn);
+        return $clienteNuevo;
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
+}
+
 ?>

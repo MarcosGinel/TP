@@ -1,4 +1,4 @@
-CREATE DATABASE `telefoneitor_db` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
+#CREATE DATABASE `telefoneitor_db` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
 # Contraseñas admin - admin
 #             empleado - empleado
 CREATE USER 'admin'@'localhost' IDENTIFIED VIA mysql_native_password USING '*4ACFE3202A5FF5CF467898FC58AAB1D615029441';
@@ -10,7 +10,7 @@ GRANT SELECT, INSERT, UPDATE, DELETE, FILE ON *.* TO 'empleado'@'localhost' REQU
 CREATE TABLE Clientes (
   cliente_id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   nombre VARCHAR(150) NOT NULL,
-  dni VARCHAR(9) NOT NULL,
+  dni VARCHAR(9) NOT NULL UNIQUE,
   email VARCHAR(50),
   telefono VARCHAR(9),
   fechaDeRegistro TIMESTAMP
@@ -42,11 +42,11 @@ CREATE TABLE Reparaciones
 
 # Datos
 INSERT INTO Clientes VALUES (1, 'Yo', '11111111X', 'elcorreosexy@gmail.com', '666666666', NOW());
-INSERT INTO Clientes VALUES (2, 'Cris', '11111111X', 'elcorreosexy@gmail.com', '666666666', NOW());
-INSERT INTO Clientes VALUES (3, 'Omar', '11111111X', 'elcorreosexy@gmail.com', '666666666', NOW());
-INSERT INTO Clientes VALUES (4, 'Acha Tío', '11111111X', 'elcorreosexy@gmail.com', '666666666', NOW());
-INSERT INTO Clientes VALUES (5, 'Sexy Joaquín Peña', '11111111X', 'elcorreosexy@gmail.com', '666666666', NOW());
-INSERT INTO Clientes VALUES (6, 'Sexy Hijo de Joaquín Peña', '11111111X', 'elcorreosexy@gmail.com', '666666666', NOW());
+INSERT INTO Clientes VALUES (2, 'Cris', '21111111X', 'elcorreosexy@gmail.com', '666666666', NOW());
+INSERT INTO Clientes VALUES (3, 'Omar', '31111111X', 'elcorreosexy@gmail.com', '666666666', NOW());
+INSERT INTO Clientes VALUES (4, 'Acha Tío', '41111111X', 'elcorreosexy@gmail.com', '666666666', NOW());
+INSERT INTO Clientes VALUES (5, 'Sexy Joaquín Peña', '51111111X', 'elcorreosexy@gmail.com', '666666666', NOW());
+INSERT INTO Clientes VALUES (6, 'Sexy Hijo de Joaquín Peña', '61111111X', 'elcorreosexy@gmail.com', '666666666', NOW());
 
 INSERT INTO Reparaciones VALUES (1, 1, 'Galaxy S4','imei', TRUE, FALSE, TRUE, TRUE, 'Sin observaciones', 50.50,  True, '12 horas', 'No reparado', 'Nada', 'Ninguna', '2016-01-30 21:24:15', 'Sin observaciones', 'admin');
 INSERT INTO Reparaciones VALUES (2, 2, 'iFone', 'imei',TRUE, FALSE, TRUE, TRUE, 'Sin observaciones', 150.50,  True, '12 horas', 'No reparado', 'Nada', 'Ninguna', '2016-01-30 21:24:15', 'Sin observaciones', 'admin');
