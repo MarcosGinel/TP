@@ -26,6 +26,7 @@ $password = mysql_real_escape_string($password);
 //$rows = mysql_num_rows($query);
 if ($conn != null) {
 $_SESSION['login_user']=$username; // iniciamos sesion
+$_SESSION['login_password']=$password;
 header("location: Loquesea.php"); // Hacia la otra pagina
 } else {
 $error = "Usuario o contraseña introducidos son incorrectos";
