@@ -6,7 +6,7 @@ if(isset($_SESSION["errorCredenciales"]))
 else
     $errorCredenciales = "";
 if(isset($_SESSION['login_user'])){
-    header("location: nuestraPaginaSiguiente.php"); // Tenemos que establecer cual va a ser la siguiente
+    header("location: vistas/crearCliente.php"); // Tenemos que establecer cual va a ser la siguiente
 }
 ?>
 <!DOCTYPE html>
