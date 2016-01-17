@@ -10,9 +10,8 @@ session_start(); // Iniciar la sesion
 <body>
 <div id="main">
 <h1>Telefoneitor</h1>
-<h2>Clientes</h2>
+<h2>Reparaciones</h2>
 <?php
-
 ?>
 </div>
 </body>
