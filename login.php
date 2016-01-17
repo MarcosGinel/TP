@@ -22,15 +22,15 @@ $password = mysql_real_escape_string($password);
 // Seleccionamos la base de datos, ponemos la database y la conexion definida antes
 //$db = mysql_select_db("", $connection);
 // LA jquery para seleccionar los usuarios 
-$query = mysql_query("select * from login where password='$password' AND username='$username'", $connection); // modificala
-$rows = mysql_num_rows($query);
-if ($rows == 1) {
+//$query = mysql_query("select * from login where password='$password' AND username='$username'", $connection); // modificala
+//$rows = mysql_num_rows($query);
+if ($conn != "") {
 $_SESSION['login_user']=$username; // iniciamos sesion
 header("location: Loquesea.php"); // Hacia la otra pagina
 } else {
 $error = "Usuario o contraseña introducidos son incorrectos";
 }
-mysql_close($connection); // Cerramos
+mysql_close($conn); // Cerramos
 }
 }
 ?>
