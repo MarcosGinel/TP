@@ -8,6 +8,11 @@ session_start(); // Iniciar la sesion
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+<header>
+    <?php
+        include_once($_SERVER['DOCUMENT_ROOT'] . "/vistas/barraMenu.php");
+    ?>
+</header>
 <div id="main">
 <h1>Telefoneitor</h1>
 <h2>Clientes</h2>
