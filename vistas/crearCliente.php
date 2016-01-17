@@ -1,4 +1,5 @@
 <?php
+session_start(); // Iniciar la sesion
 
 ?>
 <!DOCTYPE html>
@@ -10,9 +11,10 @@
 <body>
 <div id="main">
 <h1>Telefoneitor</h1>
-
 <h2>Clientes</h2>
+<?php
 
+?>
 </div>
 </body>
 </html>
