@@ -24,7 +24,7 @@ $password = mysql_real_escape_string($password);
 // LA jquery para seleccionar los usuarios 
 //$query = mysql_query("select * from login where password='$password' AND username='$username'", $connection); // modificala
 //$rows = mysql_num_rows($query);
-if ($conn != "") {
+if ($conn != null) {
 $_SESSION['login_user']=$username; // iniciamos sesion
 header("location: Loquesea.php"); // Hacia la otra pagina
 } else {
