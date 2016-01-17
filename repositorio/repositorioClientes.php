@@ -6,6 +6,7 @@
  * Time: 23:16
  */
 include_once($_SERVER['DOCUMENT_ROOT']."/dominio/Cliente.php");
+
 function getClientes($username, $password) {
     try {
         include_once($_SERVER['DOCUMENT_ROOT']."/repositorio/preparaBD.php");
