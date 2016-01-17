@@ -20,8 +20,8 @@ else
     $username = stripslashes($username);
     $password = stripslashes($password);
     if ($conn != null) {
-        $_SESSION['login_user']=$username; // iniciamos sesion
-        $_SESSION['login_password']=$password;
+        $_SESSION['username']=$username; // iniciamos sesion
+        $_SESSION['password']=$password;
         header("location: vistas/crearCliente.php"); // Hacia la otra pagina
 
     } else {
