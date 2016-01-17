@@ -12,7 +12,7 @@ function preparaBD($username, $password)
         $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
         return $dbh;
     } catch (PDOException $PDOError) {
-        echo "Error en la conexión: " .$PDOError->GetMessage();
+        return null;
     }
 }
 
