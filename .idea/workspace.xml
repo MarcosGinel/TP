@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0fc59fd-d06f-4513-bebb-fe7aea378b56" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dominio/Reparacion.php" afterPath="$PROJECT_DIR$/dominio/Reparacion.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repositorio/repositorioClientes.php" afterPath="$PROJECT_DIR$/repositorio/repositorioClientes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repositorio/repositorioReparaciones.php" afterPath="$PROJECT_DIR$/repositorio/repositorioReparaciones.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testRepositorio.php" afterPath="$PROJECT_DIR$/tests/testRepositorio.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
     </list>
     <ignored path="untitled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,23 +20,6 @@
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="C:\Users\MarcosAlberto\PhpstormProjects\untitled" />
-  </component>
-  <component name="DatabaseView">
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_TABLE_DETAILS" value="true" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-    </PATH>
-  </component>
-  <component name="ErrorTreeViewConfiguration">
-    <option name="autoscrollToSource" value="true" />
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -161,49 +140,6 @@
       </file>
     </leaf>
   </component>
-  <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="Marcos Ginel &lt;marcos.ginel@gmail.com&gt;" />
-        <option value="MarcosGinel &lt;marcos.ginel@gmail.com&gt;" />
-      </list>
-    </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="HARD" />
-    <push-targets>
-      <push-target-info repo="$PROJECT_DIR$" source="master" target-remote="proyectoTelefoneitor" target-branch="master" />
-    </push-targets>
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/5d7d2d20-9817-4e80-b474-7d3dafe14f4b/console.sql" />
-        <option value="dbtable:/8256097/5d7d2d20-9817-4e80-b474-7d3dafe14f4b/telefoneitor_db.reparaciones" />
-        <option value="dbtable:/8256097/5d7d2d20-9817-4e80-b474-7d3dafe14f4b/telefoneitor_db.clientes" />
-        <option value="$PROJECT_DIR$/controlador/leeme.txt" />
-        <option value="$PROJECT_DIR$/vistas/leeme.txt" />
-        <option value="$PROJECT_DIR$/repositorio/leeme.txt" />
-        <option value="$PROJECT_DIR$/dominio/leeme.txt" />
-        <option value="$PROJECT_DIR$/script/telefoneitor_db_script.sql" />
-        <option value="$PROJECT_DIR$/script/telefoneitor_db_script.sql" />
-        <option value="$PROJECT_DIR$/dominio/Cliente.php" />
-        <option value="$PROJECT_DIR$/repositorio/preparaBD.php" />
-        <option value="$PROJECT_DIR$/deslogear.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/vistas/listaReparaciones.php" />
-        <option value="$PROJECT_DIR$/vistas/crearReparacion.php" />
-        <option value="$PROJECT_DIR$/vistas/barraMenu.php" />
-        <option value="$PROJECT_DIR$/vistas/crearCliente.php" />
-        <option value="$PROJECT_DIR$/login.php" />
-        <option value="$PROJECT_DIR$/vistas/insertaCliente.php" />
-        <option value="$PROJECT_DIR$/vistas/listaClientes.php" />
-        <option value="$PROJECT_DIR$/repositorio/repositorioClientes.php" />
-        <option value="$PROJECT_DIR$/dominio/Reparacion.php" />
-        <option value="$PROJECT_DIR$/tests/testRepositorio.php" />
-        <option value="$PROJECT_DIR$/repositorio/repositorioReparaciones.php" />
-      </list>
-    </option>
-  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" />
   <component name="JsBuildToolPackageJson" detection-done="true" />
   <component name="JsGulpfileManager">
@@ -212,7 +148,6 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
@@ -366,260 +301,12 @@
       <pane id="Scope" />
     </panes>
   </component>
-  <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="ChangesBrowser.SHOW_FLATTEN" value="true" />
-  </component>
-  <component name="Push.Settings">
-    <excluded-roots>
-      <path value="$PROJECT_DIR$" />
-    </excluded-roots>
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\MarcosAlberto\PhpstormProjects\telefoneitor\vistas" />
-      <recent name="C:\Users\MarcosAlberto\PhpstormProjects\telefoneitor\repositorio" />
-      <recent name="C:\Users\MarcosAlberto\PhpstormProjects\telefoneitor\dominio" />
-    </key>
-  </component>
-  <component name="RunManager" selected="JavaScript Debug.testRepositorio.php">
-    <configuration default="false" name="login.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/telefoneitor/login.php">
-      <method />
-    </configuration>
-    <configuration default="false" name="testRepositorio.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/telefoneitor/tests/testRepositorio.php">
-      <method />
-    </configuration>
-    <configuration default="false" name="repositorioClientes.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/telefoneitor/repositorio/repositorioClientes.php">
-      <method />
-    </configuration>
-    <configuration default="false" name="telefoneitor" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner directory="$PROJECT_DIR$" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
-      <BehatRunner />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run-script" />
-      <scripts />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/index.php">
-      <method />
-    </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="PHP Script.index.php" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.login.php" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.testRepositorio.php" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.repositorioClientes.php" />
-      <item index="4" class="java.lang.String" itemvalue="PHPUnit.telefoneitor" />
-    </list>
-    <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.testRepositorio.php" />
-        <item index="1" class="java.lang.String" itemvalue="PHPUnit.telefoneitor" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.login.php" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.repositorioClientes.php" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="a0fc59fd-d06f-4513-bebb-fe7aea378b56" name="Default" comment="" />
-      <created>1452885177364</created>
-      <option name="number" value="Default" />
-      <updated>1452885177364</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Commit inicial">
-      <created>1452893494063</created>
-      <option name="number" value="00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1452893494063</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Commit inicial">
-      <created>1452893500936</created>
-      <option name="number" value="00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1452893500936</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Commit inicial">
-      <created>1452893551941</created>
-      <option name="number" value="00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1452893551941</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Commit inicial">
-      <created>1452893654382</created>
-      <option name="number" value="00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1452893654382</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Commit inicial">
-      <created>1452894234584</created>
-      <option name="number" value="00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1452894234584</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Modificación">
-      <created>1452894425379</created>
-      <option name="number" value="00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1452894425379</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Modificación">
-      <created>1452894705215</created>
-      <option name="number" value="00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1452894705215</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Modificación">
-      <created>1452894790731</created>
-      <option name="number" value="00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1452894790731</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Modificación">
-      <created>1452895790767</created>
-      <option name="number" value="00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1452895790767</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Modificación">
-      <created>1452895876283</created>
-      <option name="number" value="00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1452895876283</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Añadido primer test PHP">
-      <created>1452896104660</created>
-      <option name="number" value="00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1452896104660</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Añadido repositorio de Clientes (aún no terminado), y conector a la base de datos.">
-      <created>1452901785433</created>
-      <option name="number" value="00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1452901785433</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Modificado script de base de datos para añadir el creador de la reparacion (&quot;empleado&quot; o &quot;admin&quot;)">
-      <created>1452902000994</created>
-      <option name="number" value="00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1452902000994</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Modificado script de base de datos para añadir el creador de la reparacion (&quot;empleado&quot; o &quot;admin&quot;)">
-      <created>1452920272032</created>
-      <option name="number" value="00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1452920272032</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Añadidas operaciones al repositorio.">
-      <created>1452947932470</created>
-      <option name="number" value="00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1452947932470</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Añadidas operaciones al repositorio.">
-      <created>1452949765791</created>
-      <option name="number" value="00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1452949765791</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Añadidas operaciones al repositorio.">
-      <created>1452976610787</created>
-      <option name="number" value="00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1452976610787</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Añadida entidad de dominio Reparacion">
-      <created>1453040653331</created>
-      <option name="number" value="00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1453040653331</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Añadida entidad de dominio Reparacion">
-      <created>1453043885804</created>
-      <option name="number" value="00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1453043885804</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Debugeado login, ya logea contra la base de datos">
-      <created>1453047435343</created>
-      <option name="number" value="00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1453047435343</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Debugeado login, ya logea contra la base de datos">
-      <created>1453066664756</created>
-      <option name="number" value="00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1453066664756</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Añadido menu y salida destruyendo sesión">
-      <created>1453071122290</created>
-      <option name="number" value="00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1453071122290</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Añadido primer listado de clientes (buscar componente JavaScript - jQuery para mostrarlos en tabla) y formulario de Cliente para añadir vía formulario nuevos clientes.&#10;&#10;Faltaría aún las validaciones de los datos del cliente.">
-      <created>1453072514725</created>
-      <option name="number" value="00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1453072514725</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Añadida tabla con jquery, buscador, orden y paginado.&#10;&#10;">
-      <created>1453074228378</created>
-      <option name="number" value="00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1453074228378</updated>
-    </task>
-    <option name="localTasksCounter" value="25" />
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="telefoneitor - 2016.01.17 at 16h 45m 52s.xml">
-      <configuration name="telefoneitor" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="telefoneitor - 2016.01.17 at 16h 46m 00s.xml">
-      <configuration name="telefoneitor" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -656,24 +343,6 @@
     <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
       <collection />
     </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Commit inicial" />
-    <MESSAGE value="Modificación" />
-    <MESSAGE value="Añadido primer test PHP" />
-    <MESSAGE value="Añadido repositorio de Clientes (aún no terminado), y conector a la base de datos." />
-    <MESSAGE value="Modificado script de base de datos para añadir el creador de la reparacion (&quot;empleado&quot; o &quot;admin&quot;)" />
-    <MESSAGE value="Añadidas operaciones al repositorio." />
-    <MESSAGE value="Añadida entidad de dominio Reparacion" />
-    <MESSAGE value="Debugeado login, ya logea contra la base de datos" />
-    <MESSAGE value="Añadido menu y salida destruyendo sesión" />
-    <MESSAGE value="Añadido primer listado de clientes (buscar componente JavaScript - jQuery para mostrarlos en tabla) y formulario de Cliente para añadir vía formulario nuevos clientes.&#10;&#10;Faltaría aún las validaciones de los datos del cliente." />
-    <MESSAGE value="Añadida tabla con jquery, buscador, orden y paginado.&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadida tabla con jquery, buscador, orden y paginado.&#10;&#10;" />
-    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
