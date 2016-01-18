@@ -91,7 +91,7 @@ function getClienteByDNI($username, $password, $dniABuscar)
         $query = "SELECT * FROM Clientes c WHERE c.dni LIKE '".$dniABuscar."'";
         $stmt = $conn->prepare($query);
         $stmt->execute();
-
+        $clienteNuevo = null;
         // set the resulting array to associative
         $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $fila = $stmt->fetch();

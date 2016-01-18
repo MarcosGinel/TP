@@ -21,6 +21,8 @@
         // echo $_SERVER['DOCUMENT_ROOT'];
         include_once($_SERVER['DOCUMENT_ROOT']."/repositorio/repositorioClientes.php");
         include_once($_SERVER['DOCUMENT_ROOT']."/dominio/Cliente.php");
+        include_once($_SERVER['DOCUMENT_ROOT']."/repositorio/repositorioReparaciones.php");
+        include_once($_SERVER['DOCUMENT_ROOT']."/dominio/Reparacion.php");
         $array = getClientes($username, $password);
         foreach ($array as $clave => $valor)
             $valor->imprimeCliente();
@@ -32,7 +34,7 @@
         foreach ($array as $clave => $valor)
             $valor->imprimeCliente();
 
-        $cliente = getClienteByDNI($username, $password, "11111111X");
+        $cliente = getClienteByDNI($username, $password, "61111111X");
         $cliente->imprimeCliente();
 
         $cliente = getClienteByTelefono($username, $password, "666666666");
@@ -53,6 +55,11 @@
         $array = getClientes($username, $password);
         foreach ($array as $clave => $valor)
             $valor->imprimeCliente();
+
+        $reparacion = new Reparacion(0, 1, "Galaxy Spoyas", "imeilalala@lala.com", True,True,True,True,"Mi prima de observación previa", 56.05, True, 'Urgente', 'No reparado', "lalalala", "mispiezas", null ,"observaciones", $username);
+        $exito = insertarObjetoReparacion($username, $password, $reparacion);
+        echo "Exito = " + $exito;
+
         ?>
     </body>
 </html>

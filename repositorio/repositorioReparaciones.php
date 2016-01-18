@@ -9,34 +9,44 @@
 include_once($_SERVER['DOCUMENT_ROOT']."/dominio/Cliente.php");
 include_once($_SERVER['DOCUMENT_ROOT']."/dominio/Reparacion.php");
 
-function insertarObjetoCliente($username, $password, $reparacion) {
+function insertarObjetoReparacion($username, $password, $reparacion) {
     try {
         include_once($_SERVER['DOCUMENT_ROOT'] . "/repositorio/preparaBD.php");
+        include_once($_SERVER['DOCUMENT_ROOT'] . "/dominio/Cliente.php");
+        include_once($_SERVER['DOCUMENT_ROOT'] . "/repositorio/repositorioClientes.php");
+
         $conn = preparaBD($username, $password);
         $cliente_id = $reparacion->cliente_id;
         $reparacion_id = $reparacion->reparacion_id;
-        $this->marcamodelo = $marcamodelo;
-        $this->imei = $imei;
-        $this->sim = $sim;
-        $this->funda = $funda;
-        $this->sd = $sd;
-        $this->cargador = $cargador;
-        $this->observaciones_previas = $observaciones_previas;
-        $this->presupuesto = $presupuesto;
-        $this->estado_de_presupuesto = $estado_de_presupuesto;
-        $this->plazoentrega = $plazoentrega;
-        $this->estado = $estado;
-        $this->operaciones_efectuadas = $operaciones_efectuadas;
-        $this->piezas_a_comprar = $piezas_a_comprar;
-        $this->fecha_fin_de_reparacion = $fecha_fin_de_reparacion;
-        $this->observaciones_y_recomendaciones = $observaciones_y_recomendaciones;
-        $this->creado_por = $creado_por;
-        $query = 'INSERT INTO Clientes (nombre, dni, email, telefono, fechaDeRegistro) VALUES ("'.$nombre.'", "'.$dni.'", "'.$email.'", "'.$telefono.'", now()) ';
-        echo $query;
-        $stmt = $conn->prepare($query);
-        $exito = $stmt->execute();
+        $marcamodelo = $reparacion->marcamodelo;
+        $imei = $reparacion->imei;
+        $sim = $reparacion->sim;
+        $funda = $reparacion->funda;
+        $sd = $reparacion->sd;
+        $cargador = $reparacion->cargador;
+        $observaciones_previas = $reparacion->observaciones_previas;
+        $presupuesto = $reparacion->presupuesto;
+        $estado_de_presupuesto = $reparacion->estado_de_presupuesto;
+        $plazoentrega = $reparacion->plazoentrega;
+        $estado = $reparacion->estado;
+        $operaciones_efectuadas = $reparacion->operaciones_efectuadas;
+        $piezas_a_comprar = $reparacion->piezas_a_comprar;
+        $fecha_fin_de_reparacion = $reparacion->fecha_fin_de_reparacion;
+        $observaciones_y_recomendaciones = $reparacion->observaciones_y_recomendaciones;
+        $clienteEnBD = getClienteById($username, $password, $cliente_id);
+        $exito = false;
+        if($clienteEnBD != null) {
+            $query = 'INSERT INTO Reparaciones (cliente_id, marcamodelo, imei, sim, funda, sd, cargador, observaciones_previas, presupuesto, estado_de_presupuesto, plazoentrega, estado, operaciones_efectuadas, piezas_a_comprar, fecha_fin_de_reparacion, observaciones_y_recomendaciones, creado_por)
+                      VALUES ("'.$cliente_id.'", "'.$marcamodelo.'", "'.$imei.'", "'.$sim.'", "
+                              '.$funda.'", "'.$sd.'", "'.$cargador.'", "'.$observaciones_previas.'", "'.$presupuesto.'", "'.$estado_de_presupuesto.'", "'.$plazoentrega.'", "
+                              '.$estado.'", "'.$operaciones_efectuadas.'", "'.$piezas_a_comprar.'", "'.$fecha_fin_de_reparacion.'", "
+                              '.$observaciones_y_recomendaciones.'", "'.$username.'") ';
+            echo $query;
+            $stmt = $conn->prepare($query);
+            $exito = $stmt->execute();
+            cerrarBD($conn);
+        }
 
-        cerrarBD($conn);
         return $exito;
     } catch (PDOException $e) {
         echo "Error: " . $e->getMessage();

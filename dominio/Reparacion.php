@@ -6,7 +6,7 @@
  * Time: 14:57
  */
 
-class Cliente
+class Reparacion
 {
     var $reparacion_id;
     var $cliente_id;

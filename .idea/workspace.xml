@@ -1,34 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0fc59fd-d06f-4513-bebb-fe7aea378b56" name="Default" comment="Añadido primer listado de clientes (buscar componente JavaScript - jQuery para mostrarlos en tabla) y formulario de Cliente para añadir vía formulario nuevos clientes.&#10;&#10;Faltaría aún las validaciones de los datos del cliente.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/Sorting icons.psd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/sort_asc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/sort_asc_disabled.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/sort_both.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/sort_desc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/sort_desc_disabled.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/dataTables.bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/dataTables.bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/dataTables.foundation.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/dataTables.foundation.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/dataTables.jqueryui.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/dataTables.jqueryui.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/jquery.dataTables.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/jquery.dataTables.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/jquery.dataTables_themeroller.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/dataTables.bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/dataTables.bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/dataTables.foundation.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/dataTables.foundation.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/dataTables.jqueryui.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/dataTables.jqueryui.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery.dataTables.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery.dataTables.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery.js" />
+    <list default="true" id="a0fc59fd-d06f-4513-bebb-fe7aea378b56" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vistas/listaClientes.php" afterPath="$PROJECT_DIR$/vistas/listaClientes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dominio/Reparacion.php" afterPath="$PROJECT_DIR$/dominio/Reparacion.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repositorio/repositorioClientes.php" afterPath="$PROJECT_DIR$/repositorio/repositorioClientes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repositorio/repositorioReparaciones.php" afterPath="$PROJECT_DIR$/repositorio/repositorioReparaciones.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testRepositorio.php" afterPath="$PROJECT_DIR$/tests/testRepositorio.php" />
     </list>
     <ignored path="untitled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,16 +48,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8461537">
-              <caret line="27" column="51" selection-start-line="23" selection-start-column="0" selection-end-line="27" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -93,8 +61,8 @@
       <file leaf-file-name="Reparacion.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dominio/Reparacion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.769231">
-              <caret line="48" column="40" selection-start-line="31" selection-start-column="8" selection-end-line="48" selection-end-column="40" />
+            <state vertical-scroll-proportion="20.26923">
+              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
               <folding>
                 <element signature="e#6#95#0#PHP" expanded="true" />
               </folding>
@@ -122,38 +90,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="insertaCliente.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vistas/insertaCliente.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.153846">
-              <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="listaClientes.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vistas/listaClientes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.8174157">
-              <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
-              <folding>
-                <marker date="1453073908159" expanded="true" signature="879:1057" placeholder="..." />
-                <marker date="1453073908159" expanded="true" signature="896:1040" placeholder="..." />
-                <marker date="1453073908159" expanded="true" signature="1077:1255" placeholder="..." />
-                <marker date="1453073908159" expanded="true" signature="1094:1238" placeholder="..." />
-                <marker date="1453073908159" expanded="true" signature="1387:1621" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="testRepositorio.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/testRepositorio.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.153846">
-              <caret line="54" column="23" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
+            <state vertical-scroll-proportion="11.269231">
+              <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="repositorioReparaciones.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/repositorio/repositorioReparaciones.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.6685393">
+              <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+              <folding>
+                <element signature="e#6#94#0#PHP" expanded="true" />
+                <marker date="1453153073003" expanded="true" signature="1655:2014" placeholder="INSERT INTO Reparaciones... " />
+                <marker date="1453153073003" expanded="true" signature="1655:2026" placeholder="INSERT INTO Reparaciones... " />
+                <marker date="1453153073003" expanded="true" signature="1655:2420" placeholder="INSERT INTO Clientes... " />
+                <marker date="1453153073003" expanded="true" signature="1655:2421" placeholder="INSERT INTO Reparaciones... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -161,31 +119,31 @@
       <file leaf-file-name="repositorioClientes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/repositorio/repositorioClientes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.038462">
-              <caret line="170" column="79" selection-start-line="170" selection-start-column="8" selection-end-line="170" selection-end-column="79" />
+            <state vertical-scroll-proportion="-4.8846154">
+              <caret line="93" column="29" selection-start-line="93" selection-start-column="29" selection-end-line="93" selection-end-column="29" />
               <folding>
-                <marker date="1453056625988" expanded="true" signature="375:397" placeholder="SELECT * FRO... Clientes" />
-                <marker date="1453056625988" expanded="true" signature="1404:1448" placeholder="SELECT * FRO... Clientes" />
-                <marker date="1453056625988" expanded="true" signature="1404:1449" placeholder="SELECT * FRO... Clientes" />
-                <marker date="1453056625988" expanded="true" signature="2179:2236" placeholder="SELECT * FRO... Clientes" />
-                <marker date="1453056625988" expanded="true" signature="3201:3260" placeholder="SELECT * FRO... Clientes" />
-                <marker date="1453056625988" expanded="true" signature="4064:4122" placeholder="SELECT * FRO... Clientes" />
-                <marker date="1453056625988" expanded="true" signature="5149:5290" placeholder="INSERT INTO Clientes... " />
-                <marker date="1453056625988" expanded="true" signature="5763:5840" placeholder="INSERT INTO Clientes... " />
-                <marker date="1453056625988" expanded="true" signature="5763:5851" placeholder="INSERT INTO Clientes... " />
-                <marker date="1453056625988" expanded="true" signature="5763:5854" placeholder="INSERT INTO Clientes... " />
-                <marker date="1453056625988" expanded="true" signature="5763:5863" placeholder="INSERT INTO Clientes... " />
-                <marker date="1453056625988" expanded="true" signature="5763:5866" placeholder="INSERT INTO Clientes... " />
-                <marker date="1453056625988" expanded="true" signature="5763:5879" placeholder="INSERT INTO Clientes... " />
-                <marker date="1453056625988" expanded="true" signature="5763:5880" placeholder="INSERT INTO Clientes... " />
-                <marker date="1453056625988" expanded="true" signature="5763:5881" placeholder="INSERT INTO Clientes... " />
-                <marker date="1453056625988" expanded="true" signature="5763:5896" placeholder="INSERT INTO Clientes... " />
-                <marker date="1453056625988" expanded="true" signature="5763:5897" placeholder="INSERT INTO Clientes... " />
-                <marker date="1453056625988" expanded="true" signature="5763:5904" placeholder="INSERT INTO Clientes... " />
-                <marker date="1453056625988" expanded="true" signature="5763:5905" placeholder="INSERT INTO Clientes... " />
-                <marker date="1453056625988" expanded="true" signature="5763:5906" placeholder="INSERT INTO Clientes... " />
-                <marker date="1453056625988" expanded="true" signature="5763:5923" placeholder="INSERT INTO Clientes... " />
-                <marker date="1453056625988" expanded="true" signature="6393:6513" placeholder="UPDATE Clien... " />
+                <marker date="1453152112426" expanded="true" signature="375:397" placeholder="SELECT * FRO... Clientes" />
+                <marker date="1453152112426" expanded="true" signature="1404:1448" placeholder="SELECT * FRO... Clientes" />
+                <marker date="1453152112426" expanded="true" signature="1404:1449" placeholder="SELECT * FRO... Clientes" />
+                <marker date="1453152112426" expanded="true" signature="2179:2236" placeholder="SELECT * FRO... Clientes" />
+                <marker date="1453152112426" expanded="true" signature="3201:3260" placeholder="SELECT * FRO... Clientes" />
+                <marker date="1453152112426" expanded="true" signature="4093:4151" placeholder="SELECT * FRO... Clientes" />
+                <marker date="1453152112426" expanded="true" signature="5178:5319" placeholder="INSERT INTO Clientes... " />
+                <marker date="1453152112426" expanded="true" signature="5792:5869" placeholder="INSERT INTO Clientes... " />
+                <marker date="1453152112426" expanded="true" signature="5792:5880" placeholder="INSERT INTO Clientes... " />
+                <marker date="1453152112426" expanded="true" signature="5792:5883" placeholder="INSERT INTO Clientes... " />
+                <marker date="1453152112426" expanded="true" signature="5792:5892" placeholder="INSERT INTO Clientes... " />
+                <marker date="1453152112426" expanded="true" signature="5792:5895" placeholder="INSERT INTO Clientes... " />
+                <marker date="1453152112426" expanded="true" signature="5792:5908" placeholder="INSERT INTO Clientes... " />
+                <marker date="1453152112426" expanded="true" signature="5792:5909" placeholder="INSERT INTO Clientes... " />
+                <marker date="1453152112426" expanded="true" signature="5792:5910" placeholder="INSERT INTO Clientes... " />
+                <marker date="1453152112426" expanded="true" signature="5792:5925" placeholder="INSERT INTO Clientes... " />
+                <marker date="1453152112426" expanded="true" signature="5792:5926" placeholder="INSERT INTO Clientes... " />
+                <marker date="1453152112426" expanded="true" signature="5792:5933" placeholder="INSERT INTO Clientes... " />
+                <marker date="1453152112426" expanded="true" signature="5792:5934" placeholder="INSERT INTO Clientes... " />
+                <marker date="1453152112426" expanded="true" signature="5792:5935" placeholder="INSERT INTO Clientes... " />
+                <marker date="1453152112426" expanded="true" signature="5792:5952" placeholder="INSERT INTO Clientes... " />
+                <marker date="1453152112426" expanded="true" signature="6422:6542" placeholder="UPDATE Clien... " />
               </folding>
             </state>
           </provider>
@@ -229,13 +187,9 @@
         <option value="$PROJECT_DIR$/script/telefoneitor_db_script.sql" />
         <option value="$PROJECT_DIR$/script/telefoneitor_db_script.sql" />
         <option value="$PROJECT_DIR$/dominio/Cliente.php" />
-        <option value="$PROJECT_DIR$/tests/testRepositorio.php" />
-        <option value="$PROJECT_DIR$/dominio/Reparacion.php" />
         <option value="$PROJECT_DIR$/repositorio/preparaBD.php" />
         <option value="$PROJECT_DIR$/deslogear.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/repositorio/repositorioClientes.php" />
-        <option value="$PROJECT_DIR$/repositorio/repositorioReparaciones.php" />
         <option value="$PROJECT_DIR$/vistas/listaReparaciones.php" />
         <option value="$PROJECT_DIR$/vistas/crearReparacion.php" />
         <option value="$PROJECT_DIR$/vistas/barraMenu.php" />
@@ -243,6 +197,10 @@
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/vistas/insertaCliente.php" />
         <option value="$PROJECT_DIR$/vistas/listaClientes.php" />
+        <option value="$PROJECT_DIR$/repositorio/repositorioClientes.php" />
+        <option value="$PROJECT_DIR$/dominio/Reparacion.php" />
+        <option value="$PROJECT_DIR$/tests/testRepositorio.php" />
+        <option value="$PROJECT_DIR$/repositorio/repositorioReparaciones.php" />
       </list>
     </option>
   </component>
@@ -427,7 +385,7 @@
       <recent name="C:\Users\MarcosAlberto\PhpstormProjects\telefoneitor\dominio" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.telefoneitor">
+  <component name="RunManager" selected="JavaScript Debug.testRepositorio.php">
     <configuration default="false" name="login.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/telefoneitor/login.php">
       <method />
     </configuration>
@@ -481,9 +439,9 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="PHPUnit.telefoneitor" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.login.php" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.testRepositorio.php" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.testRepositorio.php" />
+        <item index="1" class="java.lang.String" itemvalue="PHPUnit.telefoneitor" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.login.php" />
         <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.repositorioClientes.php" />
       </list>
     </recent_temporary>
@@ -637,7 +595,13 @@
       <option name="project" value="LOCAL" />
       <updated>1453072514725</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Añadida tabla con jquery, buscador, orden y paginado.&#10;&#10;">
+      <created>1453074228378</created>
+      <option name="number" value="00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1453074228378</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -664,25 +628,25 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2397882" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.49546143" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5060514" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.49394855" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934534" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.49546143" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33551556" sideWeight="0.4969743" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934534" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -707,7 +671,8 @@
     <MESSAGE value="Debugeado login, ya logea contra la base de datos" />
     <MESSAGE value="Añadido menu y salida destruyendo sesión" />
     <MESSAGE value="Añadido primer listado de clientes (buscar componente JavaScript - jQuery para mostrarlos en tabla) y formulario de Cliente para añadir vía formulario nuevos clientes.&#10;&#10;Faltaría aún las validaciones de los datos del cliente." />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadido primer listado de clientes (buscar componente JavaScript - jQuery para mostrarlos en tabla) y formulario de Cliente para añadir vía formulario nuevos clientes.&#10;&#10;Faltaría aún las validaciones de los datos del cliente." />
+    <MESSAGE value="Añadida tabla con jquery, buscador, orden y paginado.&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadida tabla con jquery, buscador, orden y paginado.&#10;&#10;" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -748,28 +713,28 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1453056625988" expanded="true" signature="375:397" placeholder="SELECT * FRO... Clientes" />
-            <marker date="1453056625988" expanded="true" signature="1404:1448" placeholder="SELECT * FRO... Clientes" />
-            <marker date="1453056625988" expanded="true" signature="1404:1449" placeholder="SELECT * FRO... Clientes" />
-            <marker date="1453056625988" expanded="true" signature="2179:2236" placeholder="SELECT * FRO... Clientes" />
-            <marker date="1453056625988" expanded="true" signature="3201:3260" placeholder="SELECT * FRO... Clientes" />
-            <marker date="1453056625988" expanded="true" signature="4064:4122" placeholder="SELECT * FRO... Clientes" />
-            <marker date="1453056625988" expanded="true" signature="5149:5290" placeholder="INSERT INTO Clientes... " />
-            <marker date="1453056625988" expanded="true" signature="5763:5840" placeholder="INSERT INTO Clientes... " />
-            <marker date="1453056625988" expanded="true" signature="5763:5851" placeholder="INSERT INTO Clientes... " />
-            <marker date="1453056625988" expanded="true" signature="5763:5854" placeholder="INSERT INTO Clientes... " />
-            <marker date="1453056625988" expanded="true" signature="5763:5863" placeholder="INSERT INTO Clientes... " />
-            <marker date="1453056625988" expanded="true" signature="5763:5866" placeholder="INSERT INTO Clientes... " />
-            <marker date="1453056625988" expanded="true" signature="5763:5879" placeholder="INSERT INTO Clientes... " />
-            <marker date="1453056625988" expanded="true" signature="5763:5880" placeholder="INSERT INTO Clientes... " />
-            <marker date="1453056625988" expanded="true" signature="5763:5881" placeholder="INSERT INTO Clientes... " />
-            <marker date="1453056625988" expanded="true" signature="5763:5896" placeholder="INSERT INTO Clientes... " />
-            <marker date="1453056625988" expanded="true" signature="5763:5897" placeholder="INSERT INTO Clientes... " />
-            <marker date="1453056625988" expanded="true" signature="5763:5904" placeholder="INSERT INTO Clientes... " />
-            <marker date="1453056625988" expanded="true" signature="5763:5905" placeholder="INSERT INTO Clientes... " />
-            <marker date="1453056625988" expanded="true" signature="5763:5906" placeholder="INSERT INTO Clientes... " />
-            <marker date="1453056625988" expanded="true" signature="5763:5923" placeholder="INSERT INTO Clientes... " />
-            <marker date="1453056625988" expanded="true" signature="6393:6513" placeholder="UPDATE Clien... " />
+            <marker date="1453152112426" expanded="true" signature="375:397" placeholder="SELECT * FRO... Clientes" />
+            <marker date="1453152112426" expanded="true" signature="1404:1448" placeholder="SELECT * FRO... Clientes" />
+            <marker date="1453152112426" expanded="true" signature="1404:1449" placeholder="SELECT * FRO... Clientes" />
+            <marker date="1453152112426" expanded="true" signature="2179:2236" placeholder="SELECT * FRO... Clientes" />
+            <marker date="1453152112426" expanded="true" signature="3201:3260" placeholder="SELECT * FRO... Clientes" />
+            <marker date="1453152112426" expanded="true" signature="4093:4151" placeholder="SELECT * FRO... Clientes" />
+            <marker date="1453152112426" expanded="true" signature="5178:5319" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453152112426" expanded="true" signature="5792:5869" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453152112426" expanded="true" signature="5792:5880" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453152112426" expanded="true" signature="5792:5883" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453152112426" expanded="true" signature="5792:5892" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453152112426" expanded="true" signature="5792:5895" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453152112426" expanded="true" signature="5792:5908" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453152112426" expanded="true" signature="5792:5909" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453152112426" expanded="true" signature="5792:5910" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453152112426" expanded="true" signature="5792:5925" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453152112426" expanded="true" signature="5792:5926" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453152112426" expanded="true" signature="5792:5933" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453152112426" expanded="true" signature="5792:5934" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453152112426" expanded="true" signature="5792:5935" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453152112426" expanded="true" signature="5792:5952" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453152112426" expanded="true" signature="6422:6542" placeholder="UPDATE Clien... " />
           </folding>
         </state>
       </provider>
@@ -778,6 +743,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -787,7 +753,10 @@
           <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
           <folding>
             <element signature="e#6#94#0#PHP" expanded="true" />
-            <marker date="1453057219626" expanded="true" signature="1301:1442" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453153073003" expanded="true" signature="1655:2014" placeholder="INSERT INTO Reparaciones... " />
+            <marker date="1453153073003" expanded="true" signature="1655:2026" placeholder="INSERT INTO Reparaciones... " />
+            <marker date="1453153073003" expanded="true" signature="1655:2420" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453153073003" expanded="true" signature="1655:2421" placeholder="INSERT INTO Reparaciones... " />
           </folding>
         </state>
       </provider>
@@ -845,29 +814,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script/telefoneitor_db_script.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.82198954">
-          <caret line="37" column="40" selection-start-line="20" selection-start-column="2" selection-end-line="37" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/deslogear.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.8846154">
           <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repositorio/repositorioReparaciones.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8076925">
-          <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
-          <folding>
-            <element signature="e#6#94#0#PHP" expanded="true" />
-            <marker date="1453057219626" expanded="true" signature="1301:1442" placeholder="INSERT INTO Clientes... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -903,14 +854,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vistas/crearCliente.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3076923">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vistas/barraMenu.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.230769">
@@ -919,75 +862,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dominio/Reparacion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.769231">
-          <caret line="48" column="40" selection-start-line="31" selection-start-column="8" selection-end-line="48" selection-end-column="40" />
-          <folding>
-            <element signature="e#6#95#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8461537">
-          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vistas/insertaCliente.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846">
-          <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dominio/Cliente.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="8.5">
           <caret line="28" column="21" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repositorio/repositorioClientes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.038462">
-          <caret line="170" column="79" selection-start-line="170" selection-start-column="8" selection-end-line="170" selection-end-column="79" />
-          <folding>
-            <marker date="1453056625988" expanded="true" signature="375:397" placeholder="SELECT * FRO... Clientes" />
-            <marker date="1453056625988" expanded="true" signature="1404:1448" placeholder="SELECT * FRO... Clientes" />
-            <marker date="1453056625988" expanded="true" signature="1404:1449" placeholder="SELECT * FRO... Clientes" />
-            <marker date="1453056625988" expanded="true" signature="2179:2236" placeholder="SELECT * FRO... Clientes" />
-            <marker date="1453056625988" expanded="true" signature="3201:3260" placeholder="SELECT * FRO... Clientes" />
-            <marker date="1453056625988" expanded="true" signature="4064:4122" placeholder="SELECT * FRO... Clientes" />
-            <marker date="1453056625988" expanded="true" signature="5149:5290" placeholder="INSERT INTO Clientes... " />
-            <marker date="1453056625988" expanded="true" signature="5763:5840" placeholder="INSERT INTO Clientes... " />
-            <marker date="1453056625988" expanded="true" signature="5763:5851" placeholder="INSERT INTO Clientes... " />
-            <marker date="1453056625988" expanded="true" signature="5763:5854" placeholder="INSERT INTO Clientes... " />
-            <marker date="1453056625988" expanded="true" signature="5763:5863" placeholder="INSERT INTO Clientes... " />
-            <marker date="1453056625988" expanded="true" signature="5763:5866" placeholder="INSERT INTO Clientes... " />
-            <marker date="1453056625988" expanded="true" signature="5763:5879" placeholder="INSERT INTO Clientes... " />
-            <marker date="1453056625988" expanded="true" signature="5763:5880" placeholder="INSERT INTO Clientes... " />
-            <marker date="1453056625988" expanded="true" signature="5763:5881" placeholder="INSERT INTO Clientes... " />
-            <marker date="1453056625988" expanded="true" signature="5763:5896" placeholder="INSERT INTO Clientes... " />
-            <marker date="1453056625988" expanded="true" signature="5763:5897" placeholder="INSERT INTO Clientes... " />
-            <marker date="1453056625988" expanded="true" signature="5763:5904" placeholder="INSERT INTO Clientes... " />
-            <marker date="1453056625988" expanded="true" signature="5763:5905" placeholder="INSERT INTO Clientes... " />
-            <marker date="1453056625988" expanded="true" signature="5763:5906" placeholder="INSERT INTO Clientes... " />
-            <marker date="1453056625988" expanded="true" signature="5763:5923" placeholder="INSERT INTO Clientes... " />
-            <marker date="1453056625988" expanded="true" signature="6393:6513" placeholder="UPDATE Clien... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/testRepositorio.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.153846">
-          <caret line="54" column="23" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -1002,6 +880,101 @@
             <marker date="1453073908159" expanded="true" signature="1077:1255" placeholder="..." />
             <marker date="1453073908159" expanded="true" signature="1094:1238" placeholder="..." />
             <marker date="1453073908159" expanded="true" signature="1387:1621" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repositorio/repositorioClientes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8846154">
+          <caret line="93" column="29" selection-start-line="93" selection-start-column="29" selection-end-line="93" selection-end-column="29" />
+          <folding>
+            <marker date="1453152112426" expanded="true" signature="375:397" placeholder="SELECT * FRO... Clientes" />
+            <marker date="1453152112426" expanded="true" signature="1404:1448" placeholder="SELECT * FRO... Clientes" />
+            <marker date="1453152112426" expanded="true" signature="1404:1449" placeholder="SELECT * FRO... Clientes" />
+            <marker date="1453152112426" expanded="true" signature="2179:2236" placeholder="SELECT * FRO... Clientes" />
+            <marker date="1453152112426" expanded="true" signature="3201:3260" placeholder="SELECT * FRO... Clientes" />
+            <marker date="1453152112426" expanded="true" signature="4093:4151" placeholder="SELECT * FRO... Clientes" />
+            <marker date="1453152112426" expanded="true" signature="5178:5319" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453152112426" expanded="true" signature="5792:5869" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453152112426" expanded="true" signature="5792:5880" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453152112426" expanded="true" signature="5792:5883" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453152112426" expanded="true" signature="5792:5892" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453152112426" expanded="true" signature="5792:5895" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453152112426" expanded="true" signature="5792:5908" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453152112426" expanded="true" signature="5792:5909" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453152112426" expanded="true" signature="5792:5910" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453152112426" expanded="true" signature="5792:5925" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453152112426" expanded="true" signature="5792:5926" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453152112426" expanded="true" signature="5792:5933" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453152112426" expanded="true" signature="5792:5934" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453152112426" expanded="true" signature="5792:5935" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453152112426" expanded="true" signature="5792:5952" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453152112426" expanded="true" signature="6422:6542" placeholder="UPDATE Clien... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8461537">
+          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/insertaCliente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.66853935">
+          <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/crearCliente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3076923">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/telefoneitor_db_script.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="26" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dominio/Reparacion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="20.26923">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding>
+            <element signature="e#6#95#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/testRepositorio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="11.269231">
+          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repositorio/repositorioReparaciones.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.6685393">
+          <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+          <folding>
+            <element signature="e#6#94#0#PHP" expanded="true" />
+            <marker date="1453153073003" expanded="true" signature="1655:2014" placeholder="INSERT INTO Reparaciones... " />
+            <marker date="1453153073003" expanded="true" signature="1655:2026" placeholder="INSERT INTO Reparaciones... " />
+            <marker date="1453153073003" expanded="true" signature="1655:2420" placeholder="INSERT INTO Clientes... " />
+            <marker date="1453153073003" expanded="true" signature="1655:2421" placeholder="INSERT INTO Reparaciones... " />
           </folding>
         </state>
       </provider>
