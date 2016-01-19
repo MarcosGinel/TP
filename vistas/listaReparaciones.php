@@ -31,10 +31,7 @@ session_start(); // Iniciar la sesion
             <tr>
                 <th>Modelo</th>
                 <th>Imei</th>
-                <th>Sim?</th>
-                <th>Funda?</th>
-                <th>SD?</th>
-                <th>Cargador?</th>
+                <th>Complementos</th>
                 <th>Observaciones</th>
                 <th>Presupuesto</th>
                 <th>Presupuestado?</th>
@@ -52,10 +49,7 @@ session_start(); // Iniciar la sesion
             <tr>
                 <th>Modelo</th>
                 <th>Imei</th>
-                <th>Sim?</th>
-                <th>Funda?</th>
-                <th>SD?</th>
-                <th>Cargador?</th>
+                <th>Complementos</th>
                 <th>Observaciones</th>
                 <th>Presupuesto</th>
                 <th>Presupuestado?</th>
@@ -72,15 +66,30 @@ session_start(); // Iniciar la sesion
     $array = getReparaciones($username, $password);
     echo "<tbody>";
     foreach ($array as $clave => $valor) {
+        $funda = $valor->getfunda();
+        $sd = $valor->getsd();
+        $sim = $valor->getsim();
+        $cargador = $valor->getcargador();
+        $iconoFunda = '<img class="iconoFunda" src="../images/funda.png"/>';
+        $iconoSd = '<img class="iconoComplemento" src="../images/sd.png"/>';
+        $iconoSim = '<img class="iconoSd" src="../images/sim.png"/>';
+        $iconoCargador = '<img class="iconoComplemento" src="../images/cargador.png"/>';
+        $iconos = "";
+        if($funda)
+            $iconos = $iconos.$iconoFunda;
+        if($sim)
+            $iconos = $iconos.$iconoSim;
+        if($sd)
+            $iconos = $iconos.$iconoSd;
+        if($cargador)
+            $iconos = $iconos.$iconoCargador;
+
         if($username == 'empleado') {
             if($valor->getcreado_por() == 'empleado') {
                 echo "<tr>";
                 echo "<td>".$valor->getmarcamodelo()."</td>";
                 echo "<td>".$valor->getimei()."</td>";
-                echo "<td>".$valor->getsim()."</td>";
-                echo "<td>".$valor->getfunda()."</td>";
-                echo "<td>".$valor->getsd()."</td>";
-                echo "<td>".$valor->getcargador()."</td>";
+                echo "<td>".$iconos."</td>";
                 echo "<td>".$valor->getobservaciones_previas()."</td>";
                 echo "<td>".$valor->getpresupuesto()."</td>";
                 echo "<td>".$valor->getestado_de_presupuesto()."</td>";
@@ -98,10 +107,7 @@ session_start(); // Iniciar la sesion
             echo "<tr>";
             echo "<td>".$valor->getmarcamodelo()."</td>";
             echo "<td>".$valor->getimei()."</td>";
-            echo "<td>".$valor->getsim()."</td>";
-            echo "<td>".$valor->getfunda()."</td>";
-            echo "<td>".$valor->getsd()."</td>";
-            echo "<td>".$valor->getcargador()."</td>";
+            echo "<td>".$iconos."</td>";
             echo "<td>".$valor->getobservaciones_previas()."</td>";
             echo "<td>".$valor->getpresupuesto()."</td>";
             echo "<td>".$valor->getestado_de_presupuesto()."</td>";

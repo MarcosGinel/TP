@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0fc59fd-d06f-4513-bebb-fe7aea378b56" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vistas/insertaReparacion.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/Thumbs.db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/cargador.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/funda.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/sd.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/sim.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repositorio/repositorioReparaciones.php" afterPath="$PROJECT_DIR$/repositorio/repositorioReparaciones.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vistas/crearReparacion.php" afterPath="$PROJECT_DIR$/vistas/crearReparacion.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vistas/listaClientes.php" afterPath="$PROJECT_DIR$/vistas/listaClientes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vistas/listaReparaciones.php" afterPath="$PROJECT_DIR$/vistas/listaReparaciones.php" />
     </list>
     <ignored path="untitled.iws" />
@@ -79,14 +80,26 @@
       <file leaf-file-name="listaReparaciones.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vistas/listaReparaciones.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9044944">
-              <caret line="115" column="25" selection-start-line="115" selection-start-column="25" selection-end-line="115" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.28651685">
+              <caret line="74" column="40" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
               <folding>
-                <marker date="1453235147898" expanded="true" signature="1065:1737" placeholder="..." />
-                <marker date="1453235147898" expanded="true" signature="1082:1720" placeholder="..." />
-                <marker date="1453235147898" expanded="true" signature="1757:2429" placeholder="..." />
-                <marker date="1453235147898" expanded="true" signature="1774:2412" placeholder="..." />
+                <marker date="1453244467692" expanded="true" signature="1065:1649" placeholder="..." />
+                <marker date="1453244467692" expanded="true" signature="1082:1632" placeholder="..." />
+                <marker date="1453244467692" expanded="true" signature="1669:2253" placeholder="..." />
+                <marker date="1453244467692" expanded="true" signature="1686:2236" placeholder="..." />
+                <marker date="1453244467692" expanded="true" signature="5264:5353" placeholder="..." />
+                <marker date="1453244467692" expanded="true" signature="5299:5341" placeholder="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.115385">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -161,12 +174,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/vistas/listaClientes.php" />
         <option value="$PROJECT_DIR$/vistas/crearReparacion.php" />
         <option value="$PROJECT_DIR$/vistas/insertaReparacion.php" />
         <option value="$PROJECT_DIR$/vistas/testfile.txt" />
         <option value="$PROJECT_DIR$/repositorio/repositorioReparaciones.php" />
+        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/vistas/listaReparaciones.php" />
       </list>
     </option>
@@ -179,6 +192,7 @@
   <component name="PhpServers">
     <servers />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
@@ -382,7 +396,19 @@
       <option name="project" value="LOCAL" />
       <updated>1453153556780</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Formulario de creación de Reparación y listado.">
+      <created>1453235480814</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1453235480814</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Icono de reparación">
+      <created>1453235526694</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1453235526694</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -423,7 +449,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="A añadir" />
-    <option name="LAST_COMMIT_MESSAGE" value="A añadir" />
+    <MESSAGE value="Formulario de creación de Reparación y listado." />
+    <MESSAGE value="Icono de reparación" />
+    <option name="LAST_COMMIT_MESSAGE" value="Icono de reparación" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -605,14 +633,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3076923">
-          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vistas/barraMenu.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.230769">
@@ -641,14 +661,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.769231">
           <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vistas/testfile.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08900524">
-          <caret line="2" column="72" selection-start-line="2" selection-start-column="71" selection-end-line="2" selection-end-column="72" />
           <folding />
         </state>
       </provider>
@@ -752,15 +764,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.115385">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vistas/listaReparaciones.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9044944">
-          <caret line="115" column="25" selection-start-line="115" selection-start-column="25" selection-end-line="115" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.28651685">
+          <caret line="74" column="40" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
           <folding>
-            <marker date="1453235147898" expanded="true" signature="1065:1737" placeholder="..." />
-            <marker date="1453235147898" expanded="true" signature="1082:1720" placeholder="..." />
-            <marker date="1453235147898" expanded="true" signature="1757:2429" placeholder="..." />
-            <marker date="1453235147898" expanded="true" signature="1774:2412" placeholder="..." />
+            <marker date="1453244467692" expanded="true" signature="1065:1649" placeholder="..." />
+            <marker date="1453244467692" expanded="true" signature="1082:1632" placeholder="..." />
+            <marker date="1453244467692" expanded="true" signature="1669:2253" placeholder="..." />
+            <marker date="1453244467692" expanded="true" signature="1686:2236" placeholder="..." />
+            <marker date="1453244467692" expanded="true" signature="5264:5353" placeholder="..." />
+            <marker date="1453244467692" expanded="true" signature="5299:5341" placeholder="{...}" />
           </folding>
         </state>
       </provider>
