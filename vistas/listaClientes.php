@@ -5,7 +5,7 @@ session_start(); // Iniciar la sesion
 <html>
 <head>
 <title>Telefoneitor</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
     <link href="../css/jquery.dataTables.css" rel="stylesheet" type="text/css">
     <script src="../js/jquery.js"></script>
     <script src="../js/jquery.dataTables.js"></script>
@@ -31,6 +31,7 @@ session_start(); // Iniciar la sesion
                 <th>DNI</th>
                 <th>Telefono</th>
                 <th>Email</th>
+                <th></th>
             </tr>
         </thead>";
     echo "<tfoot>
@@ -39,6 +40,7 @@ session_start(); // Iniciar la sesion
                 <th>DNI</th>
                 <th>Telefono</th>
                 <th>Email</th>
+                <th></th>
             </tr>
         </tfoot>";
     $array = getClientes($username, $password);
@@ -49,6 +51,7 @@ session_start(); // Iniciar la sesion
         echo "<td>".$valor->getDNI()."</td>";
         echo "<td>".$valor->getTelefono()."</td>";
         echo "<td>".$valor->getEmail()."</td>";
+        echo '<td><a href="crearReparacion.php?id='.$valor->getId().'"><img class="icono" src="../images/tools.ico"/></a></td>';
         echo "</tr>";
     }
     echo "</tbody></table>";

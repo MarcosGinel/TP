@@ -37,11 +37,10 @@ function insertarObjetoReparacion($username, $password, $reparacion) {
         $exito = false;
         if($clienteEnBD != null) {
             $query = 'INSERT INTO Reparaciones (cliente_id, marcamodelo, imei, sim, funda, sd, cargador, observaciones_previas, presupuesto, estado_de_presupuesto, plazoentrega, estado, operaciones_efectuadas, piezas_a_comprar, fecha_fin_de_reparacion, observaciones_y_recomendaciones, creado_por)
-                      VALUES ("'.$cliente_id.'", "'.$marcamodelo.'", "'.$imei.'", "'.$sim.'", "
-                              '.$funda.'", "'.$sd.'", "'.$cargador.'", "'.$observaciones_previas.'", "'.$presupuesto.'", "'.$estado_de_presupuesto.'", "'.$plazoentrega.'", "
-                              '.$estado.'", "'.$operaciones_efectuadas.'", "'.$piezas_a_comprar.'", "'.$fecha_fin_de_reparacion.'", "
-                              '.$observaciones_y_recomendaciones.'", "'.$username.'") ';
-            echo $query;
+                      VALUES ("'.$cliente_id.'", "'.$marcamodelo.'", "'.$imei.'", '.$sim.', '.$funda.', '.$sd.', '.$cargador.', "'.$observaciones_previas.'", '.$presupuesto.', '.$estado_de_presupuesto.', "'.$plazoentrega.'", "'.$estado.'", "'.$operaciones_efectuadas.'", "'.$piezas_a_comprar.'", "'.$fecha_fin_de_reparacion.'", "'.$observaciones_y_recomendaciones.'", "'.$username.'") ';
+            //echo $query;
+            //$myfile = fopen("testfile.txt", "w");
+            //fwrite($myfile, $query);
             $stmt = $conn->prepare($query);
             $exito = $stmt->execute();
             cerrarBD($conn);
@@ -52,4 +51,38 @@ function insertarObjetoReparacion($username, $password, $reparacion) {
         echo "Error: " . $e->getMessage();
     }
 }
+
+function getReparaciones($username, $password) {
+    try {
+        include_once($_SERVER['DOCUMENT_ROOT']."/repositorio/preparaBD.php");
+        $conn = preparaBD($username, $password);
+        $stmt = $conn->prepare("SELECT * FROM Reparaciones");
+        $stmt->execute();
+        $array = Array();
+        $contador = 0;
+        // set the resulting array to associative
+        $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $fila = $stmt->fetch();
+        if(isset($fila))
+        {
+            while($fila) {
+
+                $reparacionNueva = new Reparacion($fila["reparacion_id"],$fila["cliente_id"],$fila["marcamodelo"],$fila["imei"],
+                                                  $fila["sim"],$fila["funda"],$fila["sd"],$fila["cargador"],$fila["observaciones_previas"],
+                                                  $fila["presupuesto"],$fila["estado_de_presupuesto"],$fila["plazoentrega"],$fila["estado"],
+                                                  $fila["operaciones_efectuadas"],$fila["piezas_a_comprar"],$fila["fecha_fin_de_reparacion"],
+                                                  $fila["observaciones_y_recomendaciones"],$fila["creado_por"]);
+                $array[$contador] = $reparacionNueva;
+                $contador++;
+                $fila = $stmt->fetch();
+            }
+        }
+        cerrarBD($conn);
+        return $array;
+    }
+    catch(PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
+}
+
 ?>
