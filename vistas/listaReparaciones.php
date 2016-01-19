@@ -34,13 +34,13 @@ session_start(); // Iniciar la sesion
                 <th>Complementos</th>
                 <th>Observaciones</th>
                 <th>Presupuesto</th>
-                <th>Presupuestado?</th>
+                <th>Ok?</th>
                 <th>Plazo de Entrega</th>
                 <th>Estado</th>
                 <th>Operaciones hechas</th>
                 <th>Piezas a comprar</th>
                 <th>Fecha de entrega reparacion</th>
-                <th>Recomendaciones</th>
+                <!--<th>Recomendaciones</th>-->
                 <th>Creada Por</th>
                 <th></th>
             </tr>
@@ -52,13 +52,13 @@ session_start(); // Iniciar la sesion
                 <th>Complementos</th>
                 <th>Observaciones</th>
                 <th>Presupuesto</th>
-                <th>Presupuestado?</th>
+                <th>Valorado?</th>
                 <th>Plazo de Entrega</th>
                 <th>Estado</th>
                 <th>Operaciones hechas</th>
                 <th>Piezas a comprar</th>
                 <th>Fecha de entrega reparacion</th>
-                <th>Recomendaciones</th>
+                <!--<th>Recomendaciones</th>-->
                 <th>Creada Por</th>
                 <th></th>
             </tr>
@@ -84,6 +84,12 @@ session_start(); // Iniciar la sesion
         if($cargador)
             $iconos = $iconos.$iconoCargador;
 
+        $presupuestado = $valor->getestado_de_presupuesto();
+        if($presupuestado)
+            $yesorno = '<img class="iconoComplemento" src="../images/yes.png"/>';
+        else
+            $yesorno = '<img class="iconoComplemento" src="../images/no.png"/>';
+
         if($username == 'empleado') {
             if($valor->getcreado_por() == 'empleado') {
                 echo "<tr>";
@@ -92,13 +98,13 @@ session_start(); // Iniciar la sesion
                 echo "<td>".$iconos."</td>";
                 echo "<td>".$valor->getobservaciones_previas()."</td>";
                 echo "<td>".$valor->getpresupuesto()."</td>";
-                echo "<td>".$valor->getestado_de_presupuesto()."</td>";
+                echo "<td>".$yesorno."</td>";
                 echo "<td>".$valor->getplazoentrega()."</td>";
                 echo "<td>".$valor->getestado()."</td>";
                 echo "<td>".$valor->getoperaciones_efectuadas()."</td>";
                 echo "<td>".$valor->getpiezas_a_comprar()."</td>";
                 echo "<td>".$valor->getfecha_fin_de_reparacion()."</td>";
-                echo "<td>".$valor->getobservaciones_y_recomendaciones()."</td>";
+                //echo "<td>".$valor->getobservaciones_y_recomendaciones()."</td>";
                 echo "<td>".$valor->getcreado_por()."</td>";
                 echo '<td><a href="id='.$valor->getId().'"><img class="icono" src="../images/tools.ico"/></a></td>';
                 echo "</tr>";
@@ -110,13 +116,13 @@ session_start(); // Iniciar la sesion
             echo "<td>".$iconos."</td>";
             echo "<td>".$valor->getobservaciones_previas()."</td>";
             echo "<td>".$valor->getpresupuesto()."</td>";
-            echo "<td>".$valor->getestado_de_presupuesto()."</td>";
+            echo "<td>".$yesorno."</td>";
             echo "<td>".$valor->getplazoentrega()."</td>";
             echo "<td>".$valor->getestado()."</td>";
             echo "<td>".$valor->getoperaciones_efectuadas()."</td>";
             echo "<td>".$valor->getpiezas_a_comprar()."</td>";
             echo "<td>".$valor->getfecha_fin_de_reparacion()."</td>";
-            echo "<td>".$valor->getobservaciones_y_recomendaciones()."</td>";
+            //echo "<td>".$valor->getobservaciones_y_recomendaciones()."</td>";
             echo "<td>".$valor->getcreado_por()."</td>";
             echo '<td><a href="id='.$valor->getId().'"><img class="icono" src="../images/tools.ico"/></a></td>';
             echo "</tr>";
