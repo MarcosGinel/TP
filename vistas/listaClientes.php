@@ -9,7 +9,9 @@ session_start(); // Iniciar la sesion
     <link href="../css/jquery.dataTables.css" rel="stylesheet" type="text/css">
     <script src="../js/jquery.js"></script>
     <script src="../js/jquery.dataTables.js"></script>
+    <meta charset="UTF-8">
 </head>
+
 <body>
 <header>
     <?php
@@ -29,7 +31,7 @@ session_start(); // Iniciar la sesion
             <tr>
                 <th>Nombre</th>
                 <th>DNI</th>
-                <th>Telefono</th>
+                <th>Teléfono</th>
                 <th>Email</th>
                 <th></th>
             </tr>
@@ -38,7 +40,7 @@ session_start(); // Iniciar la sesion
             <tr>
                 <th>Nombre</th>
                 <th>DNI</th>
-                <th>Telefono</th>
+                <th>Teléfono</th>
                 <th>Email</th>
                 <th></th>
             </tr>

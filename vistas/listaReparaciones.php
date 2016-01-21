@@ -9,6 +9,8 @@ session_start(); // Iniciar la sesion
     <link href="../css/jquery.dataTables.css" rel="stylesheet" type="text/css">
     <script src="../js/jquery.js"></script>
     <script src="../js/jquery.dataTables.js"></script>
+    <meta charset="UTF-8">
+
 </head>
 <body>
 <header>
@@ -39,7 +41,7 @@ session_start(); // Iniciar la sesion
                 <th>Estado</th>
                 <th>Operaciones hechas</th>
                 <th>Piezas a comprar</th>
-                <th>Fecha de entrega reparacion</th>
+                <th>Fecha de entrega reparación</th>
                 <!--<th>Recomendaciones</th>-->
                 <th>Creada Por</th>
                 <th></th>
@@ -57,7 +59,7 @@ session_start(); // Iniciar la sesion
                 <th>Estado</th>
                 <th>Operaciones hechas</th>
                 <th>Piezas a comprar</th>
-                <th>Fecha de entrega reparacion</th>
+                <th>Fecha de entrega reparación</th>
                 <!--<th>Recomendaciones</th>-->
                 <th>Creada Por</th>
                 <th></th>

@@ -26,9 +26,9 @@ class Cliente {
     function Cliente($cliente_id, $nombre, $dni, $email, $telefono, $fechaDeRegistro)
     {
         $this->cliente_id = $cliente_id;
-        $this->nombre = $nombre;
+        $this->nombre = utf8_encode($nombre);
         $this->dni = $dni;
-        $this->email = $email;
+        $this->email = utf8_encode($email);
         $this->telefono = $telefono;
         $this->fechaDeRegistro = $fechaDeRegistro;
     }
