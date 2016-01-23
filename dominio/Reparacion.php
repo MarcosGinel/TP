@@ -31,21 +31,21 @@ class Reparacion
     {
         $this->cliente_id = $cliente_id;
         $this->reparacion_id = $reparacion_id;
-        $this->marcamodelo = utf8_encode($marcamodelo);
-        $this->imei = utf8_encode($imei);
+        $this->marcamodelo = $marcamodelo;
+        $this->imei = $imei;
         $this->sim = $sim;
         $this->funda = $funda;
         $this->sd = $sd;
         $this->cargador = $cargador;
-        $this->observaciones_previas = utf8_encode($observaciones_previas);
+        $this->observaciones_previas = $observaciones_previas;
         $this->presupuesto = $presupuesto;
         $this->estado_de_presupuesto = $estado_de_presupuesto;
         $this->plazoentrega = $plazoentrega;
         $this->estado = $estado;
-        $this->operaciones_efectuadas = utf8_encode($operaciones_efectuadas);
-        $this->piezas_a_comprar = utf8_encode($piezas_a_comprar);
+        $this->operaciones_efectuadas = $operaciones_efectuadas;
+        $this->piezas_a_comprar = $piezas_a_comprar;
         $this->fecha_fin_de_reparacion = $fecha_fin_de_reparacion;
-        $this->observaciones_y_recomendaciones = utf8_encode($observaciones_y_recomendaciones);
+        $this->observaciones_y_recomendaciones = $observaciones_y_recomendaciones;
         $this->creado_por = $creado_por;
     }
 

@@ -44,7 +44,7 @@ CREATE TABLE Reparaciones
 INSERT INTO Clientes VALUES (1, 'Yo', '11111111X', 'elcorreosexy@gmail.com', '666666666', NOW());
 INSERT INTO Clientes VALUES (2, 'Cris', '21111111X', 'elcorreosexy@gmail.com', '666666666', NOW());
 INSERT INTO Clientes VALUES (3, 'Omar', '31111111X', 'elcorreosexy@gmail.com', '666666666', NOW());
-INSERT INTO Clientes VALUES (4, 'Acha Tío', '41111111X', 'elcorreosexy@gmail.com', '666666666', NOW());
+INSERT INTO Clientes VALUES (4, 'Acha Tio', '41111111X', 'elcorreosexy@gmail.com', '666666666', NOW());
 INSERT INTO Clientes VALUES (5, 'Sexy Joaquín Peña', '51111111X', 'elcorreosexy@gmail.com', '666666666', NOW());
 INSERT INTO Clientes VALUES (6, 'Sexy Hijo de Joaquín Peña', '61111111X', 'elcorreosexy@gmail.com', '666666666', NOW());
 
