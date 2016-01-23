@@ -47,7 +47,7 @@ function getClienteById($username, $password, $id)
         $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $fila = $stmt->fetch();
         if (isset($fila)) {
-            $cliente = new Cliente($fila["cliente_id"], $fila["nombre"], $fila["cliente_id"], $fila["dni"], $fila["email"], $fila["telefono"], $fila["fechaDeRegistro"]);
+            $cliente = new Cliente($fila["cliente_id"], $fila["nombre"], $fila["dni"], $fila["email"], $fila["telefono"], $fila["fechaDeRegistro"]);
         }
         cerrarBD($conn);
         return $cliente;

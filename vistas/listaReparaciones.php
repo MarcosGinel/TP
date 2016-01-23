@@ -108,7 +108,7 @@ session_start(); // Iniciar la sesion
                 echo "<td>".$valor->getfecha_fin_de_reparacion()."</td>";
                 //echo "<td>".$valor->getobservaciones_y_recomendaciones()."</td>";
                 echo "<td>".$valor->getcreado_por()."</td>";
-                echo '<td><a href="id='.$valor->getId().'"><img class="icono" src="../images/tools.ico"/></a></td>';
+                echo '<td><a href="id='.$valor->getId().'"><img class="icono" src="../images/tools.ico"/></a><a href="editarReparacion.php?id='.$valor->getId().'"><img class="icono" src="../images/edit.png"/></a></td>';
                 echo "</tr>";
             }
         }else {
@@ -126,7 +126,7 @@ session_start(); // Iniciar la sesion
             echo "<td>".$valor->getfecha_fin_de_reparacion()."</td>";
             //echo "<td>".$valor->getobservaciones_y_recomendaciones()."</td>";
             echo "<td>".$valor->getcreado_por()."</td>";
-            echo '<td><a href="id='.$valor->getId().'"><img class="icono" src="../images/tools.ico"/></a></td>';
+            echo '<td><a href="id='.$valor->getId().'"><img class="icono" src="../images/tools.ico"/></a><a href="editarReparacion.php?id='.$valor->getId().'"><img class="icono" src="../images/edit.png"/></a></td>';
             echo "</tr>";
         }
     }

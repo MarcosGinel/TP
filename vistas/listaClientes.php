@@ -53,7 +53,7 @@ session_start(); // Iniciar la sesion
         echo "<td>".$valor->getDNI()."</td>";
         echo "<td>".$valor->getTelefono()."</td>";
         echo "<td>".$valor->getEmail()."</td>";
-        echo '<td><a href="crearReparacion.php?id='.$valor->getId().'"><img class="icono" src="../images/tools.ico"/></a></td>';
+        echo '<td><a href="crearReparacion.php?id='.$valor->getId().'"><img class="icono" src="../images/tools.ico"/></a><a href="editarCliente.php?id='.$valor->getId().'"><img class="icono" src="../images/edit.png"/></a></td>';
         echo "</tr>";
     }
     echo "</tbody></table>";
