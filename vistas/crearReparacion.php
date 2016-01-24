@@ -8,10 +8,16 @@ $password = $_SESSION['password'];
 <html>
 <head>
 <title>Telefoneitor</title>
-<link href="style.css" rel="stylesheet" type="text/css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Bootstrap -->
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
-<header>
+<header class="cabecera" style="margin-bottom: 30px;">
     <?php
         include_once($_SERVER['DOCUMENT_ROOT'] . "/vistas/barraMenu.php");
     ?>
@@ -19,33 +25,49 @@ $password = $_SESSION['password'];
 <div id="main">
 <h1>Telefoneitor</h1>
 <h2>Reparaciones</h2>
-<?php
-    echo $cliente_id;
 
-?>
     <form action="insertaReparacion.php" method="post" enctype="multipart/form-data">
          <input type="hidden" id="cliente_id" name="cliente_id" value="<?php echo $cliente_id;?>">
 
-         <label>Marca y Modelo :</label>
-         <input id="marcamodelo" name="marcamodelo" placeholder="Introduzca la marca y elmodelo" type="text">
-         <label>Imei :</label>
-         <input id="imei" name="imei" placeholder="Introduzca el imei" type="text">
-         <label>Sim? :</label>
-         <input type="checkbox" name="sim" id="sim">
-         <label>Funda? :</label>
-         <input type="checkbox" name="funda" id="funda">
-         <label>SD? :</label>
-         <input type="checkbox" name="sd" id="sd">
-         <label>Cargador? :</label>
-         <input type="checkbox" name="cargador" id="cargador">
-         <label>Observaciones previas :</label>
-         <textarea id="observaciones_previas" name="observaciones_previas">...</textarea>
-         <label>Presupuestado? :</label>
-         <input type="checkbox" name="estado_de_presupuesto" id="estado_de_presupuesto">
-         <label>Presupuesto :</label>
-         <input type="number" id="presupuesto" name="presupuesto" step="any">
-         <label>Plazo de Entrega : </label>
-         <select id="plazoentrega" name="plazoentrega">
+        <div class="form-group">            
+         <label class="control-label">Marca y Modelo :</label>
+         <input class="form-control" id="marcamodelo" name="marcamodelo" placeholder="Introduzca la marca y elmodelo" type="text">
+        </div>
+        <div class="form-group">
+         <label class="control-label">Imei :</label>
+         <input class="form-control" id="imei" name="imei" placeholder="Introduzca el imei" type="text">
+        </div>
+        <div class="form-group col-md-3">
+         <label class="control-label">Sim? :</label>
+         <input class="form-control" type="checkbox" name="sim" id="sim">
+        </div>
+        <div class="form-group col-md-3">
+         <label class="control-label">Funda? :</label>
+         <input class="form-control" type="checkbox" name="funda" id="funda">
+        </div>
+        <div class="form-group col-md-3">
+         <label class="control-label">SD? :</label>
+         <input class="form-control" type="checkbox" name="sd" id="sd">
+        </div>
+        <div class="form-group col-md-3 ">
+         <label class="control-label">Cargador? :</label>
+         <input class="form-control" type="checkbox" name="cargador" id="cargador">
+        </div>
+        <div class="form-group">
+         <label class="control-label">Observaciones previas :</label>
+         <textarea class="form-control" id="observaciones_previas" name="observaciones_previas">...</textarea>
+        </div>
+        <div class="form-group col-md-3 presupuestado">
+         <label class="control-label">Presupuestado? :</label>
+         <input class="form-control" type="checkbox" name="estado_de_presupuesto" id="estado_de_presupuesto">
+        </div>
+        <div class="form-group col-md-9">
+         <label class="control-label">Presupuesto :</label>
+         <input class="form-control" type="number" id="presupuesto" name="presupuesto" step="any">
+        </div>
+        <div class="form-group ">
+         <label class="control-label">Plazo de Entrega : </label>
+         <select class="form-control" id="plazoentrega" name="plazoentrega">
             <option value="Urgente">Urgente</option>
             <option value="12 horas">12 horas</option>
             <option value="24 horas">24 horas</option>
@@ -54,24 +76,35 @@ $password = $_SESSION['password'];
              <option value="72 horas">72 horas</option>
              <option value="1 semana">1 semana</option>
          </select>
-        <label>Estado : </label>
-        <select id="estado" name="estado">
+        </div>
+        <div class="form-group">
+        <label class="control-label">Estado : </label>
+        <select class="form-control" id="estado" name="estado">
             <option value="No reparado">No reparado</option>
             <option value="Reparado">Reparado</option>
             <option value="Faltan piezas">Faltan piezas</option>
             <option value="A reparar">A reparar</option>
         </select>
-        <label>Operaciones efectuadas :</label>
-        <textarea id="operaciones_efectuadas" name="operaciones_efectuadas">...</textarea>
-        <label>Piezas a comprar :</label>
-        <textarea id="piezas_a_comprar" name="piezas_a_comprar"></textarea>
-        <label>Fecha fin de reparacion : </label>
-        <input type="datetime-local" name="fecha_fin_de_reparacion" value="<?php echo date("Y-m-d\TH:i"); ?>"/>
-        <label>Observaciones y recomendaciones :</label>
-        <textarea id="observaciones_y_recomendaciones" name="observaciones_y_recomendaciones">...</textarea>
-         <input name="submit" type="submit" value=" Guardar ">
+        </div>
+        <div class="form-group">
+        <label class="control-label">Operaciones efectuadas :</label>
+        <textarea class="form-control" id="operaciones_efectuadas" name="operaciones_efectuadas">...</textarea>
+        </div>
+        <div class="form-group">
+        <label class="control-label">Piezas a comprar :</label>
+        <textarea class="form-control" id="piezas_a_comprar" name="piezas_a_comprar"></textarea>
+        </div>
+        <div class="form-group">
+        <label class="control-label">Fecha fin de reparacion : </label>
+        <input class="form-control" type="datetime-local" name="fecha_fin_de_reparacion" value="<?php echo date("Y-m-d\TH:i"); ?>"/>
+        </div>
+        <div class="form-group">
+        <label class="control-label">Observaciones y recomendaciones :</label>
+        <textarea class="form-control" id="observaciones_y_recomendaciones" name="observaciones_y_recomendaciones">...</textarea>
+        </div>
+         <input class="btn btn-default btn-warning" name="submit" type="submit" value=" Guardar ">
     </form>
-?>
+
 </div>
 </body>
 </html>
