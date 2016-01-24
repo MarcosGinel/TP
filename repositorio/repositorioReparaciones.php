@@ -85,4 +85,30 @@ function getReparaciones($username, $password) {
     }
 }
 
+function getReparacionById($username, $password, $id)
+{
+    try {
+        include_once($_SERVER['DOCUMENT_ROOT'] . "/repositorio/preparaBD.php");
+        $conn = preparaBD($username, $password);
+        $stmt = $conn->prepare("SELECT * FROM Reparaciones WHERE reparacion_id=".$id);
+        $stmt->execute();
+        $array = Array();
+        $contador = 0;
+        // set the resulting array to associative
+        $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $fila = $stmt->fetch();
+        $reparacionNueva = null;
+        if (isset($fila)) {
+            $reparacionNueva = new Reparacion($fila["reparacion_id"], $fila["cliente_id"], $fila["marcamodelo"], $fila["imei"],
+                    $fila["sim"], $fila["funda"], $fila["sd"], $fila["cargador"], $fila["observaciones_previas"],
+                    $fila["presupuesto"], $fila["estado_de_presupuesto"], $fila["plazoentrega"], $fila["estado"],
+                    $fila["operaciones_efectuadas"], $fila["piezas_a_comprar"], $fila["fecha_fin_de_reparacion"],
+                    $fila["observaciones_y_recomendaciones"], $fila["creado_por"]);
+        }
+        cerrarBD($conn);
+        return $reparacionNueva;
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
+}
 ?>
