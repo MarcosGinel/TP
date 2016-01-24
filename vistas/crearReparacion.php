@@ -17,7 +17,7 @@ $password = $_SESSION['password'];
 
 </head>
 <body>
-<header class="cabecera" style="margin-bottom: 30px;">
+<header class="cabecera">
     <?php
         include_once($_SERVER['DOCUMENT_ROOT'] . "/vistas/barraMenu.php");
     ?>
@@ -29,11 +29,11 @@ $password = $_SESSION['password'];
     <form action="insertaReparacion.php" method="post" enctype="multipart/form-data">
          <input type="hidden" id="cliente_id" name="cliente_id" value="<?php echo $cliente_id;?>">
 
-        <div class="form-group">            
+        <div class="form-group col-md-6">
          <label class="control-label">Marca y Modelo :</label>
          <input class="form-control" id="marcamodelo" name="marcamodelo" placeholder="Introduzca la marca y elmodelo" type="text">
         </div>
-        <div class="form-group">
+        <div class="form-group col-md-6">
          <label class="control-label">Imei :</label>
          <input class="form-control" id="imei" name="imei" placeholder="Introduzca el imei" type="text">
         </div>
@@ -55,17 +55,18 @@ $password = $_SESSION['password'];
         </div>
         <div class="form-group">
          <label class="control-label">Observaciones previas :</label>
-         <textarea class="form-control" id="observaciones_previas" name="observaciones_previas">...</textarea>
+         <textarea class="form-control" id="observaciones_previas" name="observaciones_previas"></textarea>
         </div>
         <div class="form-group col-md-3 presupuestado">
          <label class="control-label">Presupuestado? :</label>
-         <input class="form-control" type="checkbox" name="estado_de_presupuesto" id="estado_de_presupuesto">
+         <input style="margin: 0px !important;" class="form-control" type="checkbox" name="estado_de_presupuesto" id="estado_de_presupuesto">
         </div>
         <div class="form-group col-md-9">
          <label class="control-label">Presupuesto :</label>
          <input class="form-control" type="number" id="presupuesto" name="presupuesto" step="any">
         </div>
-        <div class="form-group ">
+
+        <div class="form-group col-md-6">
          <label class="control-label">Plazo de Entrega : </label>
          <select class="form-control" id="plazoentrega" name="plazoentrega">
             <option value="Urgente">Urgente</option>
@@ -77,7 +78,7 @@ $password = $_SESSION['password'];
              <option value="1 semana">1 semana</option>
          </select>
         </div>
-        <div class="form-group">
+        <div class="form-group col-md-6">
         <label class="control-label">Estado : </label>
         <select class="form-control" id="estado" name="estado">
             <option value="No reparado">No reparado</option>
@@ -86,25 +87,26 @@ $password = $_SESSION['password'];
             <option value="A reparar">A reparar</option>
         </select>
         </div>
-        <div class="form-group">
+        <div class="form-group col-md-6">
         <label class="control-label">Operaciones efectuadas :</label>
-        <textarea class="form-control" id="operaciones_efectuadas" name="operaciones_efectuadas">...</textarea>
+        <textarea class="form-control" id="operaciones_efectuadas" name="operaciones_efectuadas"></textarea>
         </div>
-        <div class="form-group">
+        <div class="form-group col-md-6">
         <label class="control-label">Piezas a comprar :</label>
         <textarea class="form-control" id="piezas_a_comprar" name="piezas_a_comprar"></textarea>
         </div>
-        <div class="form-group">
+        <div class="form-group col-md-6">
         <label class="control-label">Fecha fin de reparacion : </label>
         <input class="form-control" type="datetime-local" name="fecha_fin_de_reparacion" value="<?php echo date("Y-m-d\TH:i"); ?>"/>
         </div>
-        <div class="form-group">
+        <div class="form-group col-md-6">
         <label class="control-label">Observaciones y recomendaciones :</label>
-        <textarea class="form-control" id="observaciones_y_recomendaciones" name="observaciones_y_recomendaciones">...</textarea>
+        <textarea class="form-control" id="observaciones_y_recomendaciones" name="observaciones_y_recomendaciones"></textarea>
         </div>
-         <input class="btn btn-default btn-warning" name="submit" type="submit" value=" Guardar ">
+         <input class="btn btn-default btn-warning col-md-offset-11" name="submit" type="submit" value=" Guardar ">
     </form>
 
 </div>
+<div class="container row"><p></p></div>
 </body>
 </html>
