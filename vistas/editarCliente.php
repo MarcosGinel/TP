@@ -17,12 +17,9 @@
 ?>
 <html>
     <head>
-        <title>Telefoneitor</title>
-        <link href="../css/style.css" rel="stylesheet" type="text/css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <!-- Bootstrap -->
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <?php
+        include_once($_SERVER['DOCUMENT_ROOT'] . "/vistas/header.php");
+        ?>
     </head>
 <body>
     <header class="cabecera">

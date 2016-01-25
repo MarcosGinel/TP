@@ -111,4 +111,77 @@ function getReparacionById($username, $password, $id)
         echo "Error: " . $e->getMessage();
     }
 }
+
+function getReparacionesPorFecha($username, $password, $fecha_inicial, $fecha_final) {
+    try {
+        include_once($_SERVER['DOCUMENT_ROOT']."/repositorio/preparaBD.php");
+        $conn = preparaBD($username, $password);
+
+        $fecha_final = str_replace("T", " ", $fecha_final);
+        $fecha_inicial = str_replace("T", " ", $fecha_inicial);
+        $fecha_final .= ":00";
+        $fecha_inicial .= ":00";
+        $query = "SELECT * FROM Reparaciones r WHERE r.fecha_fin_de_reparacion BETWEEN '".$fecha_inicial."'  AND '".$fecha_final."' and r.estado NOT LIKE 'Reparado'";
+
+        $stmt = $conn->prepare($query);
+        $stmt->execute();
+        $array = Array();
+        $contador = 0;
+        // set the resulting array to associative
+        $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $fila = $stmt->fetch();
+        if(isset($fila))
+        {
+            while($fila) {
+
+                $reparacionNueva = new Reparacion($fila["reparacion_id"],$fila["cliente_id"],$fila["marcamodelo"],$fila["imei"],
+                    $fila["sim"],$fila["funda"],$fila["sd"],$fila["cargador"],$fila["observaciones_previas"],
+                    $fila["presupuesto"],$fila["estado_de_presupuesto"],$fila["plazoentrega"],$fila["estado"],
+                    $fila["operaciones_efectuadas"],$fila["piezas_a_comprar"],$fila["fecha_fin_de_reparacion"],
+                    $fila["observaciones_y_recomendaciones"],$fila["creado_por"]);
+                $array[$contador] = $reparacionNueva;
+                $contador++;
+                $fila = $stmt->fetch();
+            }
+        }
+        cerrarBD($conn);
+        return $array;
+    }
+    catch(PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
+}
+
+function getPiezas($username, $password) {
+    try {
+        include_once($_SERVER['DOCUMENT_ROOT']."/repositorio/preparaBD.php");
+        $conn = preparaBD($username, $password);
+        $stmt = $conn->prepare("SELECT * FROM Reparaciones r WHERE r.estado LIKE 'Faltan piezas'");
+        $stmt->execute();
+        $array = Array();
+        $contador = 0;
+        // set the resulting array to associative
+        $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $fila = $stmt->fetch();
+        if(isset($fila))
+        {
+            while($fila) {
+
+                $reparacionNueva = new Reparacion($fila["reparacion_id"],$fila["cliente_id"],$fila["marcamodelo"],$fila["imei"],
+                    $fila["sim"],$fila["funda"],$fila["sd"],$fila["cargador"],$fila["observaciones_previas"],
+                    $fila["presupuesto"],$fila["estado_de_presupuesto"],$fila["plazoentrega"],$fila["estado"],
+                    $fila["operaciones_efectuadas"],$fila["piezas_a_comprar"],$fila["fecha_fin_de_reparacion"],
+                    $fila["observaciones_y_recomendaciones"],$fila["creado_por"]);
+                $array[$contador] = $reparacionNueva;
+                $contador++;
+                $fila = $stmt->fetch();
+            }
+        }
+        cerrarBD($conn);
+        return $array;
+    }
+    catch(PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
+}
 ?>

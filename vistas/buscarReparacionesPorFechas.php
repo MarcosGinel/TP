@@ -1,5 +1,9 @@
 <?php
 session_start(); // Iniciar la sesion
+$username = $_SESSION['username'];
+$password = $_SESSION['password'];
+$fecha_inicial = $_POST['fecha_inicial'];
+$fecha_final = $_POST['fecha_final'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -7,8 +11,8 @@ session_start(); // Iniciar la sesion
     <?php
         include_once($_SERVER['DOCUMENT_ROOT'] . "/vistas/header.php");
     ?>
-
 </head>
+
 <body>
 <header class="cabecera">
     <?php
@@ -17,18 +21,14 @@ session_start(); // Iniciar la sesion
 </header>
 <div id="main">
     <h1>Telefoneitor</h1>
-    <h2>Lista de Reparaciones:</h2>
+    <h2>Reparaciones para las fechas: </h2>
     <?php
     include_once($_SERVER['DOCUMENT_ROOT'] . "/dominio/Cliente.php");
-    include_once($_SERVER['DOCUMENT_ROOT'] . "/dominio/Reparacion.php");
     include_once($_SERVER['DOCUMENT_ROOT'] . "/repositorio/repositorioClientes.php");
     include_once($_SERVER['DOCUMENT_ROOT'] . "/repositorio/repositorioReparaciones.php");
-    $username = $_SESSION['username'];
-    $password = $_SESSION['password'];
     echo "<table id=\"example\" class=\"display\" cellspacing=\"0\" width=\"100%\">";
     echo "<thead>
             <tr>
-                <th>Cliente</th>
                 <th>Modelo</th>
                 <th>Imei</th>
                 <th>Complementos</th>
@@ -47,7 +47,6 @@ session_start(); // Iniciar la sesion
         </thead>";
     echo "<tfoot>
             <tr>
-                <th>Cliente</th>
                 <th>Modelo</th>
                 <th>Imei</th>
                 <th>Complementos</th>
@@ -64,12 +63,9 @@ session_start(); // Iniciar la sesion
                 <th></th>
             </tr>
         </tfoot>";
-    $array = getReparaciones($username, $password);
+    $array = getReparacionesPorFecha($username, $password, $fecha_inicial, $fecha_final);
     echo "<tbody>";
     foreach ($array as $clave => $valor) {
-        $cliente_id_iterador = $valor->getClienteId();
-        $cliente = getClienteById($username,$password,$cliente_id_iterador);
-        $nombreCliente = $cliente->getNombre();
         $funda = $valor->getfunda();
         $sd = $valor->getsd();
         $sim = $valor->getsim();
@@ -97,7 +93,6 @@ session_start(); // Iniciar la sesion
         if($username == 'empleado') {
             if($valor->getcreado_por() == 'empleado') {
                 echo "<tr>";
-                echo "<td>".$nombreCliente."</td>";
                 echo "<td>".$valor->getmarcamodelo()."</td>";
                 echo "<td>".$valor->getimei()."</td>";
                 echo "<td>".$iconos."</td>";
@@ -116,7 +111,6 @@ session_start(); // Iniciar la sesion
             }
         }else {
             echo "<tr>";
-            echo "<td>".$nombreCliente."</td>";
             echo "<td>".$valor->getmarcamodelo()."</td>";
             echo "<td>".$valor->getimei()."</td>";
             echo "<td>".$iconos."</td>";
