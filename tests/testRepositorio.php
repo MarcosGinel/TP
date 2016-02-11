@@ -59,7 +59,11 @@
         $reparacion = new Reparacion(0, 1, "Galaxy Spoyas", "imeilalala@lala.com", True,True,True,True,"Mi prima de observación previa", 56.05, True, 'Urgente', 'No reparado', "lalalala", "mispiezas", null ,"observaciones", $username);
         $exito = insertarObjetoReparacion($username, $password, $reparacion);
         echo "Exito = " + $exito;
-
+        $reparacion = getReparacionById($username, $password, 2);
+        if($reparacion == null)
+            echo "Encontrado";
+        else
+            echo "No encontrado";
         ?>
     </body>
 </html>

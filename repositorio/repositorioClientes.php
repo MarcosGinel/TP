@@ -46,6 +46,7 @@ function getClienteById($username, $password, $id)
         // set the resulting array to associative
         $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $fila = $stmt->fetch();
+        $cliente = null;
         if (isset($fila)) {
             $cliente = new Cliente($fila["cliente_id"], $fila["nombre"], $fila["dni"], $fila["email"], $fila["telefono"], $fila["fechaDeRegistro"]);
         }

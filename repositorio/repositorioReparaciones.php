@@ -90,7 +90,9 @@ function getReparacionById($username, $password, $id)
     try {
         include_once($_SERVER['DOCUMENT_ROOT'] . "/repositorio/preparaBD.php");
         $conn = preparaBD($username, $password);
-        $stmt = $conn->prepare("SELECT * FROM Reparaciones WHERE reparacion_id=".$id);
+        $query = "SELECT * FROM Reparaciones r WHERE r.reparacion_id=".intval($id);
+        $stmt = $conn->prepare($query);
+
         $stmt->execute();
         $array = Array();
         $contador = 0;
@@ -104,6 +106,9 @@ function getReparacionById($username, $password, $id)
                     $fila["presupuesto"], $fila["estado_de_presupuesto"], $fila["plazoentrega"], $fila["estado"],
                     $fila["operaciones_efectuadas"], $fila["piezas_a_comprar"], $fila["fecha_fin_de_reparacion"],
                     $fila["observaciones_y_recomendaciones"], $fila["creado_por"]);
+            /*$f = fopen("miquery.txt", "w");
+            fwrite($f, $query);
+            fclose($f);*/
         }
         cerrarBD($conn);
         return $reparacionNueva;

@@ -41,7 +41,7 @@ session_start(); // Iniciar la sesion
                 <th>Piezas a comprar</th>
                 <th>Fecha de entrega reparación</th>
                 <!--<th>Recomendaciones</th>-->
-                <th>Creada Por</th>
+                <th>Zona</th>
                 <th></th>
             </tr>
         </thead>";
@@ -60,7 +60,7 @@ session_start(); // Iniciar la sesion
                 <th>Piezas a comprar</th>
                 <th>Fecha de entrega reparación</th>
                 <!--<th>Recomendaciones</th>-->
-                <th>Creada Por</th>
+                <th>Zona</th>
                 <th></th>
             </tr>
         </tfoot>";
