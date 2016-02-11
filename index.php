@@ -43,7 +43,7 @@ if(isset($_SESSION['login_user'])){
                 <input class="btn btn-primary col-md-4 col-md-offset-4" name="submit" type="submit" value=" Login ">
             </div>
 
-            <div class="container col-md-12 col-md-offset-4">
+            <div class="container col-md-offset-3 col-md-9">
             <br/><span><?php echo $error; ?></span>
             <br/><span><?php echo $errorCredenciales; ?></span>
             </div>
