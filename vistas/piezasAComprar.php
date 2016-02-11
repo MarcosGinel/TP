@@ -19,7 +19,6 @@ $password = $_SESSION['password'];
     ?>
 </header>
 <div id="main">
-    <h1>Telefoneitor</h1>
     <h2>Piezas a comprar: </h2>
     <?php
     include_once($_SERVER['DOCUMENT_ROOT'] . "/dominio/Cliente.php");
@@ -33,7 +32,7 @@ $password = $_SESSION['password'];
                 <th>Plazo de Entrega</th>
                 <th>Piezas a comprar</th>
                 <th>Fecha de entrega reparación</th>
-                <th>Reparacion creada por</th>
+                <th>Reparacion creada en</th>
             </tr>
         </thead>";
     echo "<tfoot>
@@ -43,7 +42,7 @@ $password = $_SESSION['password'];
                 <th>Plazo de Entrega</th>
                 <th>Piezas a comprar</th>
                 <th>Fecha de entrega reparación</th>
-                <th>Reparacion creada por</th>
+                <th>Reparacion creada en</th>
             </tr>
         </tfoot>";
     $array = getPiezas($username, $password);
@@ -53,8 +52,19 @@ $password = $_SESSION['password'];
         $cliente = getClienteById($username,$password,$cliente_id_iterador);
         $nombreCliente = $cliente->getNombre();
 
-        if($username == 'empleado') {
-            if($valor->getcreado_por() == 'empleado') {
+        if($username == 'admin') {
+            echo "<tr>";
+            echo "<td>".$nombreCliente."</td>";
+            echo "<td>".$valor->getmarcamodelo()."</td>";
+            echo "<td>".$valor->getplazoentrega()."</td>";
+            echo "<td>".$valor->getpiezas_a_comprar()."</td>";
+            echo "<td>".$valor->getfecha_fin_de_reparacion()."</td>";
+            //echo "<td>".$valor->getobservaciones_y_recomendaciones()."</td>";
+            echo "<td>".$valor->getcreado_por()."</td>";
+            echo "</tr>";
+
+        }else {
+            if($valor->getcreado_por() == $username) {
                 echo "<tr>";
                 echo "<td>".$nombreCliente."</td>";
                 echo "<td>".$valor->getmarcamodelo()."</td>";
@@ -65,16 +75,6 @@ $password = $_SESSION['password'];
                 echo "<td>".$valor->getcreado_por()."</td>";
                 echo "</tr>";
             }
-        }else {
-            echo "<tr>";
-            echo "<td>".$nombreCliente."</td>";
-            echo "<td>".$valor->getmarcamodelo()."</td>";
-            echo "<td>".$valor->getplazoentrega()."</td>";
-            echo "<td>".$valor->getpiezas_a_comprar()."</td>";
-            echo "<td>".$valor->getfecha_fin_de_reparacion()."</td>";
-            //echo "<td>".$valor->getobservaciones_y_recomendaciones()."</td>";
-            echo "<td>".$valor->getcreado_por()."</td>";
-            echo "</tr>";
         }
     }
     echo "</tbody></table>";
@@ -82,7 +82,15 @@ $password = $_SESSION['password'];
 </div>
 <script>
     $(document).ready(function() {
-        $('#example').DataTable();
+        $('#example').DataTable( {
+            dom: 'Bfrtip',
+            buttons: [
+                'copyHtml5',
+                'excelHtml5',
+                'csvHtml5',
+                'pdfHtml5'
+            ]
+        } );
     } );
 </script>
 </body>

@@ -2,14 +2,13 @@
 session_start(); // Iniciar la sesion
 $username = $_SESSION['username'];
 $password = $_SESSION['password'];
-$fecha_inicial = $_POST['fecha_inicial'];
-$fecha_final = $_POST['fecha_final'];
+$estado = $_POST['estado'];
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <?php
-        include_once($_SERVER['DOCUMENT_ROOT'] . "/vistas/header.php");
+    include_once($_SERVER['DOCUMENT_ROOT'] . "/vistas/header.php");
     ?>
 </head>
 
@@ -20,7 +19,7 @@ $fecha_final = $_POST['fecha_final'];
     ?>
 </header>
 <div id="main">
-    <h2>Reparaciones para las fechas: </h2>
+    <h2>Reparaciones por estado: </h2>
     <?php
     include_once($_SERVER['DOCUMENT_ROOT'] . "/dominio/Cliente.php");
     include_once($_SERVER['DOCUMENT_ROOT'] . "/repositorio/repositorioClientes.php");
@@ -64,7 +63,7 @@ $fecha_final = $_POST['fecha_final'];
                 <th></th>
             </tr>
         </tfoot>";
-    $array = getReparacionesPorFecha($username, $password, $fecha_inicial, $fecha_final);
+    $array = getReparacionesPorEstado($username, $password, $estado);
     echo "<tbody>";
     foreach ($array as $clave => $valor) {
         $funda = $valor->getfunda();

@@ -18,7 +18,7 @@
     ?>
 </header>
 <div id="main">
-    <h1>Telefoneitor</h1>
+
     <h2>Reparaciones para las fechas: </h2>
     <p>No se encuentra la reparación con dicho ID</p>
     <p><a href="reparacionPorId.php">Buscador por id</a></p>

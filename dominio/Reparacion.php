@@ -26,8 +26,9 @@ class Reparacion
     var $fecha_fin_de_reparacion;
     var $observaciones_y_recomendaciones;
     var $creado_por;
+    var $tecnicos;
 
-    function Reparacion($reparacion_id, $cliente_id, $marcamodelo, $imei, $sim, $funda, $sd, $cargador, $observaciones_previas, $presupuesto, $estado_de_presupuesto, $plazoentrega, $estado, $operaciones_efectuadas, $piezas_a_comprar, $fecha_fin_de_reparacion, $observaciones_y_recomendaciones, $creado_por)
+    function Reparacion($reparacion_id, $cliente_id, $marcamodelo, $imei, $sim, $funda, $sd, $cargador, $observaciones_previas, $presupuesto, $estado_de_presupuesto, $plazoentrega, $estado, $operaciones_efectuadas, $piezas_a_comprar, $fecha_fin_de_reparacion, $observaciones_y_recomendaciones, $creado_por, $tecnicos)
     {
         $this->cliente_id = $cliente_id;
         $this->reparacion_id = $reparacion_id;
@@ -47,6 +48,7 @@ class Reparacion
         $this->fecha_fin_de_reparacion = $fecha_fin_de_reparacion;
         $this->observaciones_y_recomendaciones = $observaciones_y_recomendaciones;
         $this->creado_por = $creado_por;
+        $this->tecnicos = $tecnicos;
     }
 
     /**
@@ -72,6 +74,7 @@ class Reparacion
         echo $this->fecha_fin_de_reparacion;
         echo $this->observaciones_y_recomendaciones;
         echo $this->creado_por;
+        echo $this->tecnicos;
     }
 
     function setClienteId($cliente)
@@ -239,6 +242,16 @@ class Reparacion
     function getcreado_por()
     {
         return $this->creado_por;
+    }
+
+    function settecnicos($tecnicos)
+    {
+        $this->tecnicos = $tecnicos;
+    }
+
+    function gettecnicos()
+    {
+        return $this->tecnicos;
     }
 }
 

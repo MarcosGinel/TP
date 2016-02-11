@@ -2,6 +2,10 @@
     <div class="container">
         <ul class="mainmenu nav navbar-nav ">
             <li>
+                <img class="milogo" alt="Brand" src="/images/logo.gif">
+
+            </li>
+            <li>
                 <a href="crearCliente.php">Crear cliente</a>
             </li>
             <!--<li><a href="crearReparacion.php">Crear reparacion</a></li>-->
@@ -16,6 +20,7 @@
                 <ul class="dropdown-menu">
                     <li><a href="reparacionesPorFecha.php">Por Fecha</a></li>
                     <li><a href="reparacionPorId.php">Por Id.</a></li>
+                    <li><a href="reparacionesPorZona.php">Por Estado</a></li>
                 </ul>
             </li>
             <li><a href="piezasAComprar.php">Piezas A Comprar</a></li>

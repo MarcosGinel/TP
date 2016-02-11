@@ -24,7 +24,7 @@ $password = $_SESSION['password'];
     ?>
 </header>
 <div id="main">
-    <h1>Telefoneitor</h1>
+
     <h2>Buscar por Id:</h2>
 
     <form action="buscarReparacionPorId.php" method="post" enctype="multipart/form-data">

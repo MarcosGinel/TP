@@ -19,7 +19,7 @@ $password = $_SESSION['password'];
     ?>
 </header>
 <div id="main">
-<h1>Telefoneitor</h1>
+
 <h2>Reparaciones</h2>
 
     <form action="insertaReparacion.php" method="post" enctype="multipart/form-data">
@@ -96,8 +96,12 @@ $password = $_SESSION['password'];
         <input class="form-control" type="datetime-local" name="fecha_fin_de_reparacion" value="<?php echo date("Y-m-d\TH:i"); ?>"/>
         </div>
         <div class="form-group col-md-6">
-        <label class="control-label">Observaciones y recomendaciones :</label>
-        <textarea class="form-control" id="observaciones_y_recomendaciones" name="observaciones_y_recomendaciones"></textarea>
+            <label class="control-label">Observaciones y recomendaciones :</label>
+            <textarea class="form-control" id="observaciones_y_recomendaciones" name="observaciones_y_recomendaciones"></textarea>
+        </div>
+        <div class="form-group col-md-12">
+            <label class="control-label">Tecnicos asociados :</label>
+            <textarea class="form-control" id="tecnicos" name="tecnicos"></textarea>
         </div>
          <input class="btn btn-default btn-warning col-md-offset-11" name="submit" type="submit" value=" Guardar ">
     </form>

@@ -34,12 +34,12 @@ $reparacion = getReparacionById($username, $password, $reparacion_id);
     ?>
 </header>
 <div id="main">
-    <h1>Telefoneitor</h1>
+
     <h2>Reparaciones</h2>
 
-    <form action="actualizarReparacion.php" method="post" enctype="multipart/form-data">
+    <form action="actualizaReparacion.php" method="post" enctype="multipart/form-data">
         <input type="hidden" id="cliente_id" name="cliente_id" value="<?php echo $reparacion->getClienteId();?>">
-
+        <input type="hidden" id="reparacion_id" name="reparacion_id" value="<?php echo $reparacion->getId();?>">
         <div class="form-group col-md-6">
             <label class="control-label">Marca y Modelo :</label>
             <input class="form-control" id="marcamodelo" name="marcamodelo" value="<?php echo $reparacion->getmarcamodelo();?>" type="text">
@@ -50,19 +50,42 @@ $reparacion = getReparacionById($username, $password, $reparacion_id);
         </div>
         <div class="form-group col-md-3">
             <label class="control-label">Sim? :</label>
-            <input class="form-control" type="checkbox" name="sim" id="sim" value="<?php echo $reparacion->getsim();?>">
+            <?php if($reparacion->getsim())
+                $mensaje = '<input class="form-control" type="checkbox" name="sim" id="sim" checked="checked">';
+            else
+                $mensaje = '<input class="form-control" type="checkbox" name="sim" id="sim">';
+            echo $mensaje;
+
+            ?>
+
+
         </div>
         <div class="form-group col-md-3 ">
             <label class="control-label">Funda? :</label>
-            <input class="form-control" type="checkbox" name="funda" id="funda" value="<?php echo $reparacion->getfunda();?>">
+            <?php if($reparacion->getfunda())
+                $mensaje = '<input class="form-control" type="checkbox" name="funda" id="funda" checked="checked">';
+            else
+                $mensaje = '<input class="form-control" type="checkbox" name="funda" id="funda">';
+            echo $mensaje;
+            ?>
         </div>
         <div class="form-group col-md-3 ">
             <label class="control-label">SD? :</label>
-            <input class="form-control" type="checkbox" name="sd" id="sd" value="<?php echo $reparacion->getsd();?>">
+            <?php if($reparacion->getsd())
+                $mensaje = '<input class="form-control" type="checkbox" name="sd" id="sd" checked="checked">';
+            else
+                $mensaje = '<input class="form-control" type="checkbox" name="sd" id="sd">';
+            echo $mensaje;
+            ?>
         </div>
         <div class="form-group col-md-3 ">
             <label class="control-label">Cargador? :</label>
-            <input class="form-control" type="checkbox" name="cargador" id="cargador" value="<?php echo $reparacion->getcargador();?>">
+            <?php if($reparacion->getcargador())
+                $mensaje = '<input class="form-control" type="checkbox" name="cargador" id="cargador" checked="checked">';
+            else
+                $mensaje = '<input class="form-control" type="checkbox" name="cargador" id="cargador">';
+            echo $mensaje;
+            ?>
         </div>
         <div class="form-group">
             <label class="control-label">Observaciones previas :</label>
@@ -70,7 +93,12 @@ $reparacion = getReparacionById($username, $password, $reparacion_id);
         </div>
         <div class="form-group col-md-3 presupuestado">
             <label class="control-label">Presupuestado? :</label>
-            <input class="form-control" type="checkbox" name="estado_de_presupuesto" id="estado_de_presupuesto" value="<?php echo $reparacion->getestado_de_presupuesto();?>">
+            <?php if($reparacion->getestado_de_presupuesto())
+                $mensaje = '<input class="form-control" type="checkbox" name="estado_de_presupuesto" id="estado_de_presupuesto" checked="checked">';
+            else
+                $mensaje = '<input class="form-control" type="checkbox" name="estado_de_presupuesto" id="estado_de_presupuesto">';
+            echo $mensaje;
+            ?>
         </div>
         <div class="form-group col-md-9">
             <label class="control-label">Presupuesto :</label>
@@ -120,10 +148,6 @@ $reparacion = getReparacionById($username, $password, $reparacion_id);
                         echo '<option value="Reparado" selected>Reparado</option>';
                     else
                         echo '<option value="Reparado">Reparado</option>';
-                    if($reparacion->getestado()=="Reparado")
-                        echo '<option value="Reparado" selected>Reparado</option>';
-                    else
-                        echo '<option value="Reparado">Reparado</option>';
                     if($reparacion->getestado()=="Faltan piezas")
                         echo '<option value="Faltan piezas" selected>Faltan piezas</option>';
                     else
@@ -141,7 +165,7 @@ $reparacion = getReparacionById($username, $password, $reparacion_id);
         </div>
         <div class="form-group col-md-6">
             <label class="control-label">Piezas a comprar :</label>
-            <textarea class="form-control" id="piezas_a_comprar" name="piezas_a_comprar"><?php $reparacion->getpiezas_a_comprar()?></textarea>
+            <textarea class="form-control" id="piezas_a_comprar" name="piezas_a_comprar"><?php echo $reparacion->getpiezas_a_comprar()?></textarea>
         </div>
         <div class="form-group col-md-6">
             <label class="control-label">Fecha fin de reparacion : </label>
@@ -150,6 +174,10 @@ $reparacion = getReparacionById($username, $password, $reparacion_id);
         <div class="form-group col-md-6">
             <label class="control-label">Observaciones y recomendaciones :</label>
             <textarea class="form-control" id="observaciones_y_recomendaciones" name="observaciones_y_recomendaciones"><?php echo $reparacion->getobservaciones_y_recomendaciones()?></textarea>
+        </div>
+        <div class="form-group col-md-12">
+            <label class="control-label">Técnicos asociados :</label>
+            <textarea class="form-control" id="tecnicos" name="tecnicos"><?php echo $reparacion->gettecnicos()?></textarea>
         </div>
         <input class="btn btn-default btn-warning col-md-offset-11" name="submit" type="submit" value=" Guardar ">
     </form>

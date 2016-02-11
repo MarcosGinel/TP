@@ -16,7 +16,7 @@
         ?>
         </header>
         <div id="main">
-            <h1>Telefoneitor</h1>
+
             <h2>Clientes</h2>
             <form action="insertaCliente.php" method="post" enctype="multipart/form-data">
                 <div class="form-group">

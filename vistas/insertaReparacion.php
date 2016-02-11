@@ -44,7 +44,7 @@
                             $_POST['observaciones_previas'], $_POST['presupuesto'],  $estado_de_presupuesto,
                             $_POST['plazoentrega'], $estado, $_POST['operaciones_efectuadas'],
                             $_POST['piezas_a_comprar'], $_POST['fecha_fin_de_reparacion'],
-                            $_POST['observaciones_y_recomendaciones'], $username);
+                            $_POST['observaciones_y_recomendaciones'], $username, $_POST['tecnicos']);
 
     insertarObjetoReparacion($username, $password, $reparacion);
     header("location: /vistas/listaClientes.php");

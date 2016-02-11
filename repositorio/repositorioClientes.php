@@ -21,7 +21,7 @@ function getClientes($username, $password) {
         if(isset($fila))
         {
             while($fila) {
-                $clienteNuevo = new Cliente($fila["cliente_id"],$fila["nombre"],$fila["cliente_id"],$fila["dni"],$fila["email"],$fila["telefono"],$fila["fechaDeRegistro"]);
+                $clienteNuevo = new Cliente($fila["cliente_id"],$fila["nombre"],$fila["dni"],$fila["email"],$fila["telefono"],$fila["fechaDeRegistro"],$fila["creado_por"]);
                 //$clienteNuevo->imprimeCliente();
                 $array[$contador] = $clienteNuevo;
                 $contador++;
@@ -48,7 +48,7 @@ function getClienteById($username, $password, $id)
         $fila = $stmt->fetch();
         $cliente = null;
         if (isset($fila)) {
-            $cliente = new Cliente($fila["cliente_id"], $fila["nombre"], $fila["dni"], $fila["email"], $fila["telefono"], $fila["fechaDeRegistro"]);
+            $cliente = new Cliente($fila["cliente_id"], $fila["nombre"], $fila["dni"], $fila["email"], $fila["telefono"], $fila["fechaDeRegistro"], $fila["creado_por"]);
         }
         cerrarBD($conn);
         return $cliente;
@@ -71,7 +71,7 @@ function getClientesByNombre($username, $password, $name)
         $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $fila = $stmt->fetch();
         while($fila) {
-            $clienteNuevo = new Cliente($fila["cliente_id"],$fila["nombre"],$fila["cliente_id"],$fila["dni"],$fila["email"],$fila["telefono"],$fila["fechaDeRegistro"]);
+            $clienteNuevo = new Cliente($fila["cliente_id"],$fila["nombre"],$fila["cliente_id"],$fila["dni"],$fila["email"],$fila["telefono"],$fila["fechaDeRegistro"], $fila["creado_por"]);
             //$clienteNuevo->imprimeCliente();
             $array[$contador] = $clienteNuevo;
             $contador++;
@@ -97,7 +97,7 @@ function getClienteByDNI($username, $password, $dniABuscar)
         $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $fila = $stmt->fetch();
         while($fila) {
-            $clienteNuevo = new Cliente($fila["cliente_id"],$fila["nombre"],$fila["cliente_id"],$fila["dni"],$fila["email"],$fila["telefono"],$fila["fechaDeRegistro"]);
+            $clienteNuevo = new Cliente($fila["cliente_id"],$fila["nombre"],$fila["cliente_id"],$fila["dni"],$fila["email"],$fila["telefono"],$fila["fechaDeRegistro"], $fila["creado_por"]);
             $fila = $stmt->fetch();
         }
         cerrarBD($conn);
@@ -120,7 +120,7 @@ function getClienteByTelefono($username, $password, $telf)
         $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $fila = $stmt->fetch();
         while($fila) {
-            $clienteNuevo = new Cliente($fila["cliente_id"],$fila["nombre"],$fila["cliente_id"],$fila["dni"],$fila["email"],$fila["telefono"],$fila["fechaDeRegistro"]);
+            $clienteNuevo = new Cliente($fila["cliente_id"],$fila["nombre"],$fila["cliente_id"],$fila["dni"],$fila["email"],$fila["telefono"],$fila["fechaDeRegistro"], $fila["creado_por"]);
             $fila = $stmt->fetch();
         }
         cerrarBD($conn);
@@ -139,7 +139,7 @@ function insertarObjetoCliente($username, $password, $cliente) {
         $email = $cliente->getEmail();
         $telefono = $cliente->getTelefono();
         $fechaDeRegistro = $cliente->getFechaDeRegistro();
-        $query = 'INSERT INTO Clientes (nombre, dni, email, telefono, fechaDeRegistro) VALUES ("'.$nombre.'", "'.$dni.'", "'.$email.'", "'.$telefono.'", now()) ';
+        $query = 'INSERT INTO Clientes (nombre, dni, email, telefono, fechaDeRegistro, creado_por) VALUES ("'.$nombre.'", "'.$dni.'", "'.$email.'", "'.$telefono.'", now(), $username) ';
         echo $query;
         $stmt = $conn->prepare($query);
         $exito = $stmt->execute();
@@ -155,7 +155,7 @@ function insertarCliente($username, $password, $nombre, $dni, $email, $telefono)
     try {
         include_once($_SERVER['DOCUMENT_ROOT'] . "/repositorio/preparaBD.php");
         $conn = preparaBD($username, $password);
-        $query = 'INSERT INTO Clientes (nombre, dni, email, telefono, fechaDeRegistro) VALUES ("'.$nombre.'", "'.$dni.'", "'.$email.'", "'.$telefono.'", now()) ';
+        $query = 'INSERT INTO Clientes (nombre, dni, email, telefono, fechaDeRegistro, creado_por) VALUES ("'.$nombre.'", "'.$dni.'", "'.$email.'", "'.$telefono.'", now(), $username) ';
         //echo $query;
         $stmt = $conn->prepare($query);
         $exito = $stmt->execute();

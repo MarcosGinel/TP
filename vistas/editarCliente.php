@@ -28,7 +28,7 @@
         ?>
     </header>
     <div id="main">
-        <h1>Telefoneitor</h1>
+
         <h2>Clientes</h2>
         <form action="actualizarCliente.php" method="post" enctype="multipart/form-data">
             <input type="hidden" id="cliente_id" name="cliente_id" value="<?php echo $cliente_id?>"/>

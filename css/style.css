@@ -40,3 +40,22 @@
 #example {
     font-size: 12px !important;
 }
+
+#rojo {
+   background-color: red;
+
+}
+#naranja {
+   background-color: orange;
+}
+#verde {
+    background-color: lightgreen;
+}
+#azul {
+    background-color: lightblue;
+}
+
+.milogo {
+    height: 50px;
+    width: 120px;
+}

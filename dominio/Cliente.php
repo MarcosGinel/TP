@@ -13,6 +13,7 @@ class Cliente {
     var $email;
     var $telefono;
     var $fechaDeRegistro;
+    var $creado_por;
 
     /**
      * Cliente constructor.
@@ -23,7 +24,7 @@ class Cliente {
      * @param $telefono
      * @param $fechaDeRegistro
      */
-    function Cliente($cliente_id, $nombre, $dni, $email, $telefono, $fechaDeRegistro)
+    function Cliente($cliente_id, $nombre, $dni, $email, $telefono, $fechaDeRegistro, $creado_por)
     {
         $this->cliente_id = $cliente_id;
         $this->nombre = $nombre;
@@ -31,6 +32,7 @@ class Cliente {
         $this->email = $email;
         $this->telefono = $telefono;
         $this->fechaDeRegistro = $fechaDeRegistro;
+        $this->creado_por = $creado_por;
     }
 
     /**
@@ -42,6 +44,7 @@ class Cliente {
         echo $this->email.'<br/>';
         echo $this->telefono.'<br/>';
         echo $this->fechaDeRegistro.'<br/>';
+        echo $this->creado_por.'<br/>';
     }
 
     function getId() {
@@ -92,5 +95,12 @@ class Cliente {
         $this->fechaDeRegistro = $fechaDeRegistro;
     }
 
+    function setCreadoPor($creado_por) {
+        $this->creado_por = $creado_por;
+    }
+
+    function getCreadoPor() {
+        return $this->creado_por;
+    }
 }
 ?>

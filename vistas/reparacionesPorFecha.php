@@ -25,7 +25,7 @@
     ?>
 </header>
 <div id="main">
-    <h1>Telefoneitor</h1>
+
     <h2>Buscar por fechas:</h2>
 
     <form action="buscarReparacionesPorFechas.php" method="post" enctype="multipart/form-data">
