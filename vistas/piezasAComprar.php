@@ -33,6 +33,7 @@ $password = $_SESSION['password'];
                 <th>Piezas a comprar</th>
                 <th>Fecha de entrega reparación</th>
                 <th>Reparacion creada en</th>
+                <th></th>
             </tr>
         </thead>";
     echo "<tfoot>
@@ -43,6 +44,7 @@ $password = $_SESSION['password'];
                 <th>Piezas a comprar</th>
                 <th>Fecha de entrega reparación</th>
                 <th>Reparacion creada en</th>
+                <th></th>
             </tr>
         </tfoot>";
     $array = getPiezas($username, $password);
@@ -61,6 +63,7 @@ $password = $_SESSION['password'];
             echo "<td>".$valor->getfecha_fin_de_reparacion()."</td>";
             //echo "<td>".$valor->getobservaciones_y_recomendaciones()."</td>";
             echo "<td>".$valor->getcreado_por()."</td>";
+            echo '<td><a href="editarReparacion.php?id='.$valor->getId().'"><img class="icono" src="../images/edit.png"/></a></td>';
             echo "</tr>";
 
         }else {

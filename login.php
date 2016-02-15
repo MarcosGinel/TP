@@ -22,7 +22,7 @@ else
     if ($conn != null) {
         $_SESSION['username']=$username; // iniciamos sesion
         $_SESSION['password']=$password;
-        header("location: vistas/crearCliente.php"); // Hacia la otra pagina
+        header("location: vistas/listaClientes.php"); // Hacia la otra pagina
 
     } else {
         $errorCredenciales = "Usuario o contraseña introducidos son incorrectos";

@@ -22,7 +22,7 @@ if(isset($_SESSION['login_user'])){
 </head>
 <body>
 <div id="main">
-    <center><img src="/images/logo.gif"7></center>
+    <center><img src="/images/logo.png"7></center>
     <div id="login">
         <div class="row">
         <h3 class="col-md-offset-2">Inicie sesion:</h3>

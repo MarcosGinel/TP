@@ -99,11 +99,17 @@ $password = $_SESSION['password'];
             <label class="control-label">Observaciones y recomendaciones :</label>
             <textarea class="form-control" id="observaciones_y_recomendaciones" name="observaciones_y_recomendaciones"></textarea>
         </div>
-        <div class="form-group col-md-12">
+        <?php
+            if($username == "admin")
+                $mensaje = '<div class="form-group col-md-12">';
+            else
+                $mensaje = '<div class="form-group col-md-12 noTecnicos">';
+            echo $mensaje;
+        ?>
             <label class="control-label">Tecnicos asociados :</label>
             <textarea class="form-control" id="tecnicos" name="tecnicos"></textarea>
         </div>
-         <input class="btn btn-default btn-warning col-md-offset-11" name="submit" type="submit" value=" Guardar ">
+         <input class="btn btn-default btn-warning col-md-offset-11" name="submit" type="submit" value=" Guardar "><br/>
     </form>
 
 </div>

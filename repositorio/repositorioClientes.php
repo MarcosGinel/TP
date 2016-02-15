@@ -155,8 +155,7 @@ function insertarCliente($username, $password, $nombre, $dni, $email, $telefono)
     try {
         include_once($_SERVER['DOCUMENT_ROOT'] . "/repositorio/preparaBD.php");
         $conn = preparaBD($username, $password);
-        $query = 'INSERT INTO Clientes (nombre, dni, email, telefono, fechaDeRegistro, creado_por) VALUES ("'.$nombre.'", "'.$dni.'", "'.$email.'", "'.$telefono.'", now(), $username) ';
-        //echo $query;
+        $query = 'INSERT INTO Clientes (nombre, dni, email, telefono, fechaDeRegistro, creado_por) VALUES ("'.$nombre.'", "'.$dni.'", "'.$email.'", "'.$telefono.'", "'.date().'", "'.$username.'")';
         $stmt = $conn->prepare($query);
         $exito = $stmt->execute();
 

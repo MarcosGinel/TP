@@ -35,7 +35,7 @@
                     <label>Email :</label>
                     <input class="form-control" id="email" name="email" placeholder="Introduzca el mail" type="email">
                 </div>
-                <input class="btn btn-default btn-warning" name="submit" type="submit" value=" Guardar ">
+                <input class="btn btn-default btn-warning" name="submit" type="submit" value=" Guardar "><br/>
             </form>
         </div>
     </body>

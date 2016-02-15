@@ -1,8 +1,8 @@
 <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
+    <div class="container container_modificado">
         <ul class="mainmenu nav navbar-nav ">
             <li>
-                <img class="milogo" alt="Brand" src="/images/logo.gif">
+                <img class="milogo" alt="Brand" src="/images/logo.png">
 
             </li>
             <li>

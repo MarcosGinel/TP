@@ -57,5 +57,13 @@
 
 .milogo {
     height: 50px;
-    width: 120px;
+    width: 240px;
+}
+
+.container_modificado {
+    margin-left: 0px !important;
+}
+
+.noTecnicos {
+    visibility: hidden;
 }
